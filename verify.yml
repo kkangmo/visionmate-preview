@@ -1,0 +1,41 @@
+name: VisionMate Preview Verification
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "assets/**"
+      - "mock-cms.json"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright
+        run: |
+          npm init -y > /dev/null 2>&1
+          npm install playwright-core > /dev/null 2>&1
+          npx playwright-core install chromium --with-deps > /dev/null 2>&1 || npx playwright install chromium --with-deps
+
+      - name: Run verification against public URL
+        run: node verify.mjs
+        env:
+          TARGET_URL: https://kkangmo.github.io/visionmate-preview/
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-results
+          path: |
+            results/
+            verify.log
