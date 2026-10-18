@@ -44,6 +44,8 @@ for (const vp of VIEWPORTS) {
   });
 
   try {
+    // ===== HOME (/) =====
+    // Live Stage는 2026-10-18 구조 변경으로 /showcase로 이동됨. 홈에서는 검증하지 않음.
     await page.goto(TARGET, { waitUntil: "domcontentloaded", timeout: 60000 });
     await page.waitForTimeout(6000);
 
@@ -59,32 +61,35 @@ for (const vp of VIEWPORTS) {
     const hOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
     !hOverflow ? pass(`${vp.name}: no horizontal overflow`) : fail(`${vp.name}: horizontal overflow detected`);
 
-    // 4. Live Stage 스크롤
-    await page.evaluate(() => { const el = document.querySelector(".live-stage"); if (el) el.scrollIntoView(); });
-    await page.waitForTimeout(2000);
+    // 4. 콘솔/네트워크 (홈)
+    consoleErrors.length === 0 ? pass(`${vp.name}: no console errors`) : fail(`${vp.name}: console errors: ${consoleErrors.join(" | ")}`);
+    netFails.length === 0 ? pass(`${vp.name}: no network failures`) : fail(`${vp.name}: net fails: ${netFails.join(" | ")}`);
 
-    // 5. 4개 탭 클릭 + PNG
+    // ===== SHOWCASE (/showcase) — Live Stage 4개 데모 검증 =====
+    // CONCEPT Showcase 정책: 실제 구축사례가 아닌 콘셉트 시연
+    await page.goto(TARGET + "showcase", { waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.waitForTimeout(6000);
+
+    // 5. 4개 탭 클릭 + PNG (ATELIER / LUMÉ / GIFT STUDIO / ATLAS)
     const tabNames = ["corporate", "brand", "commerce", "ai"];
+    const tabLabels = ["ATELIER", "LUMÉ", "GIFT STUDIO", "ATLAS"];
     for (let i = 0; i < 4; i++) {
       await page.evaluate((idx) => {
         const btns = [...document.querySelectorAll(".ls-tabs button")];
         if (btns[idx]) btns[idx].click();
       }, i);
       await page.waitForTimeout(1800);
-      const tabVisible = await page.evaluate((n) => {
-        const t = document.body.textContent;
-        return n === "corporate" ? t.includes("ATELIER") : n === "brand" ? t.includes("LUMÉ") : n === "commerce" ? t.includes("GIFT STUDIO") : t.includes("ATLAS");
-      }, tabNames[i]);
-      tabVisible ? pass(`${vp.name}: tab ${tabNames[i]} visible`) : fail(`${vp.name}: tab ${tabNames[i]} not visible`);
+      const tabVisible = await page.evaluate((label) => document.body.textContent.includes(label), tabLabels[i]);
+      tabVisible ? pass(`${vp.name}: showcase tab ${tabNames[i]} (${tabLabels[i]}) visible`) : fail(`${vp.name}: showcase tab ${tabNames[i]} not visible`);
 
       // 이미지 로딩 확인
       const imgsOk = await page.evaluate(() => {
         const imgs = [...document.querySelectorAll(".live-stage img")];
         return imgs.length === 0 || imgs.every((img) => img.complete && img.naturalWidth > 0);
       });
-      imgsOk ? pass(`${vp.name}: tab ${tabNames[i]} images loaded`) : fail(`${vp.name}: tab ${tabNames[i]} broken images`);
+      imgsOk ? pass(`${vp.name}: showcase tab ${tabNames[i]} images loaded`) : fail(`${vp.name}: showcase tab ${tabNames[i]} broken images`);
 
-      await page.screenshot({ path: `${OUT}/${vp.name}-${tabNames[i]}.png` });
+      await page.screenshot({ path: `${OUT}/${vp.name}-showcase-${tabNames[i]}.png` });
     }
 
     // 6. 텍스트 잘림 (상품명)
@@ -93,11 +98,7 @@ for (const vp of VIEWPORTS) {
     const truncated = await page.evaluate(() =>
       [...document.querySelectorAll(".ls-product h3")].filter((n) => n.scrollWidth > n.clientWidth + 1).map((n) => n.textContent.trim())
     );
-    truncated.length === 0 ? pass(`${vp.name}: no truncated product names`) : fail(`${vp.name}: truncated: ${truncated.join(",")}`);
-
-    // 7. 콘솔/네트워크
-    consoleErrors.length === 0 ? pass(`${vp.name}: no console errors`) : fail(`${vp.name}: console errors: ${consoleErrors.join(" | ")}`);
-    netFails.length === 0 ? pass(`${vp.name}: no network failures`) : fail(`${vp.name}: net fails: ${netFails.join(" | ")}`);
+    truncated.length === 0 ? pass(`${vp.name}: showcase no truncated product names`) : fail(`${vp.name}: showcase truncated: ${truncated.join(",")}`);
 
   } catch (e) {
     fail(`${vp.name}: exception ${String(e).slice(0, 120)}`);
