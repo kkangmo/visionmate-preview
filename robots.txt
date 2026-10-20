@@ -1,1 +1,5 @@
-VXNlci1hZ2VudDogKgpEaXNhbGxvdzogLwo=
+User-agent: *
+Allow: /
+Disallow: /admin
+
+Sitemap: https://www.visionmate.co.kr/sitemap.xml
