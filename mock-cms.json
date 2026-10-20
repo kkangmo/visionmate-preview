@@ -192,9 +192,9 @@
       "social_linkedin_url": "",
       "social_instagram_url": "",
       "social_youtube_url": "",
-      "desktop_video_url": "/assets/video/visionmate-scroll-hero.mp4",
+      "desktop_video_url": "",
       "mobile_video_url": "",
-      "poster_url": "/assets/video/visionmate-scroll-hero-poster.jpg",
+      "poster_url": "",
       "scroll_video_enabled": "true"
     },
     "sections": {
