@@ -1,0 +1,34 @@
+/* Scoped interaction study. No hero media, geometry or scroll changes. */
+.public-site{--vm-interact-ease:cubic-bezier(.22,1,.36,1)}
+.public-site :is(.header-cta,.primary-button,.final-cta-primary){isolation:isolate;position:relative;overflow:hidden;background:#2364e8;box-shadow:none;transition:border-color .28s,color .28s,transform .16s}
+.public-site :is(.header-cta,.primary-button,.final-cta-primary)::before{content:"";position:absolute;inset:-1px -40%;z-index:-1;pointer-events:none;background:#1444b6;opacity:1;transform:translateX(-110%) skewX(-22deg);transition:transform .55s var(--vm-interact-ease)}
+.public-site :is(.header-cta,.primary-button,.final-cta-primary)::after{content:"";position:absolute;inset:-30% -45%;z-index:-1;pointer-events:none;background:linear-gradient(90deg,transparent 38%,#ffffff24 50%,transparent 62%);transform:translateX(-110%) skewX(-22deg);transition:transform .65s var(--vm-interact-ease)}
+.public-site :is(.header-cta,.primary-button,.final-cta-primary):focus-visible::before{transform:translateX(0) skewX(-22deg)}
+.public-site :is(.header-cta,.primary-button,.final-cta-primary):focus-visible::after{transform:translateX(110%) skewX(-22deg)}
+.public-site .desktop-nav a::after{bottom:-8px;background:#89bbff;transform:scaleX(0);transform-origin:right;transition:transform .4s var(--vm-interact-ease)}
+.public-site .desktop-nav a:is(:hover,:focus-visible,[aria-current="page"])::after{transform:scaleX(1);transform-origin:left}
+.public-site .vm-inline-link{position:relative;border-bottom-color:transparent;isolation:isolate;transition:color .25s}
+.public-site .vm-inline-link::after{content:"";position:absolute;inset:auto 0 0;height:1px;background:currentColor;transform:scaleX(.18);transform-origin:right;transition:transform .45s var(--vm-interact-ease)}
+.public-site .vm-inline-link:is(:hover,:focus-visible)::after{transform:scaleX(1);transform-origin:left}
+.public-site :is(.vm-inline-link,.text-button,.final-cta-secondary) svg{transition:transform .45s var(--vm-interact-ease)}
+.public-site :is(.vm-inline-link,.text-button,.final-cta-secondary):is(:hover,:focus-visible) svg{transform:translateX(5px)}
+.public-site :is(.ss-sel,.route-card,.product-hub-card){position:relative;isolation:isolate;overflow:hidden}
+.public-site :is(.ss-sel,.route-card,.product-hub-card)::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(120deg,#86baff18,#86baff04);transform:scaleX(0);transform-origin:left;transition:transform .42s var(--vm-interact-ease),opacity .24s;opacity:0}
+.public-site :is(.ss-sel,.route-card,.product-hub-card)[data-vm-edge="right"]::before{transform-origin:right}
+.public-site :is(.ss-sel,.route-card,.product-hub-card)[data-vm-edge="top"]::before{transform:scaleY(0);transform-origin:top}
+.public-site :is(.ss-sel,.route-card,.product-hub-card)[data-vm-edge="bottom"]::before{transform:scaleY(0);transform-origin:bottom}
+.public-site :is(.ss-sel,.route-card,.product-hub-card):focus-visible::before{transform:scale(1);opacity:1}
+.public-site .ss-sel .ss-sel-arrow{transition:transform .4s var(--vm-interact-ease)}
+.public-site :is(.header-cta,.primary-button,.final-cta-primary):active{transform:translateY(1px) scale(.985)}
+@media(hover:hover) and (pointer:fine){
+ .public-site :is(.header-cta,.primary-button,.final-cta-primary):hover{background:#2364e8;border-color:#91bdff;box-shadow:none;transform:none}
+ .public-site :is(.header-cta,.primary-button,.final-cta-primary):hover::before{transform:translateX(0) skewX(-22deg)}
+ .public-site :is(.header-cta,.primary-button,.final-cta-primary):hover::after{transform:translateX(110%) skewX(-22deg)}
+ .public-site :is(.ss-sel,.route-card,.product-hub-card)[data-vm-over="true"]::before{transform:scale(1);opacity:1}
+ .public-site .ss-sel[data-vm-over="true"] .ss-sel-arrow{transform:translateX(4px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .public-site :is(.header-cta,.primary-button,.final-cta-primary,.desktop-nav a,.vm-inline-link,.ss-sel,.route-card,.product-hub-card)::before,
+ .public-site :is(.header-cta,.primary-button,.final-cta-primary,.desktop-nav a,.vm-inline-link,.ss-sel,.route-card,.product-hub-card)::after{transition:none!important}
+ .public-site .ss-sel .ss-sel-arrow{transition:none;transform:none!important}
+}
