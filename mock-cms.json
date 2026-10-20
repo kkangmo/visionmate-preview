@@ -12,7 +12,7 @@
       "primaryCtaTarget": "contact",
       "secondaryCtaLabel": "구축 사례 보기",
       "secondaryCtaTarget": "cases",
-      "seoTitle": "VisionMate | AI Business Builder",
+      "seoTitle": "비전메이트 | AI 서비스 개발·업무 자동화·시스템 구축",
       "metaDescription": "VisionMate는 AI·데이터·자동화를 활용해 AI 서비스, 업무 자동화, 비즈니스 시스템과 성장 시스템을 설계하고 구축합니다."
     },
     "pages": [
@@ -25,7 +25,7 @@
         "primaryCtaTarget": "contact",
         "secondaryCtaLabel": "구축 사례 보기",
         "secondaryCtaTarget": "cases",
-        "seoTitle": "VisionMate | AI Business Builder",
+        "seoTitle": "비전메이트 | AI 서비스 개발·업무 자동화·시스템 구축",
         "metaDescription": "VisionMate는 AI·데이터·자동화를 활용해 AI 서비스, 업무 자동화, 비즈니스 시스템과 성장 시스템을 설계하고 구축합니다."
       },
       {
@@ -37,7 +37,7 @@
         "primaryCtaTarget": "/contact",
         "secondaryCtaLabel": "구축 사례 보기",
         "secondaryCtaTarget": "/cases",
-        "seoTitle": "AI 솔루션 | VisionMate",
+        "seoTitle": "AI 솔루션 | AI 서비스 개발·업무 자동화 | 비전메이트",
         "metaDescription": "새로운 서비스부터 반복 업무 자동화까지. 현재의 문제를 기준으로 필요한 구축 범위를 찾습니다."
       },
       {
@@ -61,7 +61,7 @@
         "primaryCtaTarget": "/cases",
         "secondaryCtaLabel": "프로젝트 문의",
         "secondaryCtaTarget": "/contact",
-        "seoTitle": "자체 서비스 | VisionMate",
+        "seoTitle": "자체 서비스 | 메이트기프트·MateGift Lab | 비전메이트",
         "metaDescription": "메이트기프트와 MateGift Lab. 판촉 상품을 찾는 일부터 캠페인을 기획하는 일까지, 구체적인 업무에서 출발한 서비스입니다."
       },
       {
@@ -73,7 +73,7 @@
         "primaryCtaTarget": "/contact",
         "secondaryCtaLabel": "구축 사례 보기",
         "secondaryCtaTarget": "/cases",
-        "seoTitle": "비전메이트 소개 | VisionMate",
+        "seoTitle": "회사 소개 | AI 비즈니스 빌더 비전메이트",
         "metaDescription": "VisionMate는 문제를 발견하고, 필요한 시스템을 만들고, 실제 운영에서 배우는 AI 비즈니스 빌더입니다."
       },
       {
@@ -97,7 +97,7 @@
         "primaryCtaTarget": "/contact",
         "secondaryCtaLabel": "구축 사례 보기",
         "secondaryCtaTarget": "/cases",
-        "seoTitle": "프로젝트 문의 | VisionMate",
+        "seoTitle": "프로젝트 문의 | AI 개발·업무 자동화 상담 | 비전메이트",
         "metaDescription": "반복되는 업무나 만들고 싶은 서비스부터 이야기해 주세요. 기술이나 기능 목록을 미리 정하지 않아도 됩니다."
       }
     ],
@@ -118,7 +118,9 @@
         "homeSortOrder": 0,
         "sortOrder": 0,
         "status": "PUBLISHED",
-        "visible": true
+        "visible": true,
+        "seoTitle": "AI 서비스 기획·MVP 개발 | 비전메이트",
+        "metaDescription": "아이디어를 검증 가능한 첫 서비스로. 사용자와 해결할 문제를 정의하고, 핵심 가설을 검증할 첫 버전의 범위를 설계합니다."
       },
       {
         "id": "ai-system",
@@ -136,7 +138,9 @@
         "homeSortOrder": 1,
         "sortOrder": 1,
         "status": "PUBLISHED",
-        "visible": true
+        "visible": true,
+        "seoTitle": "AI 시스템 구축·데이터 연동 | 비전메이트",
+        "metaDescription": "AI와 데이터를 하나의 서비스로. 사용자 화면, 데이터 흐름, AI 처리 단계와 사람의 검토 지점을 연결합니다."
       },
       {
         "id": "automation",
@@ -154,7 +158,9 @@
         "homeSortOrder": 2,
         "sortOrder": 2,
         "status": "PUBLISHED",
-        "visible": true
+        "visible": true,
+        "seoTitle": "업무 자동화·API 연동 | 비전메이트",
+        "metaDescription": "반복 업무를 연결하고, 판단에 집중하도록. 입력부터 처리, 검토, 결과 기록까지 자동화 가능한 단계와 예외 처리를 설계합니다."
       },
       {
         "id": "growth",
@@ -172,7 +178,9 @@
         "homeSortOrder": 3,
         "sortOrder": 3,
         "status": "PUBLISHED",
-        "visible": true
+        "visible": true,
+        "seoTitle": "검색·콘텐츠 성장 시스템 | 비전메이트",
+        "metaDescription": "검색과 콘텐츠가 쌓이는 성장 구조. 검색에 노출되는 정보 구조와 콘텐츠 발행, 유입부터 문의까지의 측정 흐름을 설계합니다."
       }
     ],
     "cases": [],
@@ -240,7 +248,7 @@
       "trendmate_url": "",
       "mategift_url": "",
       "contact_enabled": "false",
-      "site_url": "",
+      "site_url": "https://www.visionmate.co.kr",
       "privacy_policy_ready": "false",
       "contact_form_enabled": "false",
       "insights_enabled": "false",
