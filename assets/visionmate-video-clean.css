@@ -1,0 +1,8 @@
+/* Preserve original footage and scroll mapping; remove synthetic texture. */
+.public-site.home-route .pin-journey .pin-grain{display:none}
+.public-site.home-route .pin-journey .scroll-flow-canvas{z-index:0}
+.public-site.home-route .pin-journey .scroll-film-video{z-index:1}
+.public-site.home-route .pin-journey .scroll-film-mask{z-index:2}
+.public-site.home-route .pin-journey .scroll-film-mask{
+ background:linear-gradient(90deg,#03091166 0%,#03091126 36%,transparent 68%),linear-gradient(0deg,#03091166 0%,transparent 30%);
+}

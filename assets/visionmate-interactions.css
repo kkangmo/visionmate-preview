@@ -12,8 +12,8 @@
 .public-site .vm-inline-link:is(:hover,:focus-visible)::after{transform:scaleX(1);transform-origin:left}
 .public-site :is(.vm-inline-link,.text-button,.final-cta-secondary) svg{transition:transform .45s var(--vm-interact-ease)}
 .public-site :is(.vm-inline-link,.text-button,.final-cta-secondary):is(:hover,:focus-visible) svg{transform:translateX(5px)}
-.public-site :is(.ss-sel,.route-card,.product-hub-card){position:relative;isolation:isolate;overflow:hidden}
-.public-site :is(.ss-sel,.route-card,.product-hub-card)::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(120deg,#86baff18,#86baff04);transform:scaleX(0);transform-origin:left;transition:transform .42s var(--vm-interact-ease),opacity .24s;opacity:0}
+.public-site :is(.ss-sel,.route-card,.product-hub-card,.product-story){position:relative;isolation:isolate;overflow:hidden}
+.public-site :is(.ss-sel,.route-card,.product-hub-card)::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(120deg,#377aff52,#5da2ff15);transform:scaleX(0);transform-origin:left;transition:transform .42s var(--vm-interact-ease),opacity .24s;opacity:0}
 .public-site :is(.ss-sel,.route-card,.product-hub-card)[data-vm-edge="right"]::before{transform-origin:right}
 .public-site :is(.ss-sel,.route-card,.product-hub-card)[data-vm-edge="top"]::before{transform:scaleY(0);transform-origin:top}
 .public-site :is(.ss-sel,.route-card,.product-hub-card)[data-vm-edge="bottom"]::before{transform:scaleY(0);transform-origin:bottom}
@@ -31,4 +31,28 @@
  .public-site :is(.header-cta,.primary-button,.final-cta-primary,.desktop-nav a,.vm-inline-link,.ss-sel,.route-card,.product-hub-card)::before,
  .public-site :is(.header-cta,.primary-button,.final-cta-primary,.desktop-nav a,.vm-inline-link,.ss-sel,.route-card,.product-hub-card)::after{transition:none!important}
  .public-site .ss-sel .ss-sel-arrow{transition:none;transform:none!important}
+}
+
+/* Clear input feedback without delaying navigation or changing the hero. */
+.public-site :is(.text-button,.final-cta-secondary){isolation:isolate;position:relative;overflow:hidden}
+.public-site .vm-click-wave{position:absolute;pointer-events:none;border-radius:50%;background:#c4e3ff;z-index:0;opacity:0}
+.public-site :is(.header-cta,.primary-button,.text-button,.final-cta-primary,.final-cta-secondary).vm-press{transform:translateY(1px) scale(.965)!important;box-shadow:inset 0 0 0 1px #c4e3ff88}
+.public-site :is(.ss-sel,.route-card,.product-hub-card).vm-press{box-shadow:inset 0 0 0 2px #97c6ff!important}
+.public-site :is(.route-card,.product-hub-card){transition:border-color .3s,box-shadow .3s}
+.public-site :is(.route-card,.product-hub-card)::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#78caff,#3a73ff);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--vm-interact-ease);pointer-events:none}
+.public-site :is(.route-card,.product-hub-card):focus-visible::after{transform:scaleX(1)}
+.public-site .product-story .product-visual{position:relative;isolation:isolate;overflow:hidden}
+.public-site .product-story .product-visual::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;opacity:0;background:linear-gradient(130deg,#488fff26,transparent 48%,#71caff15);transition:opacity .4s}
+.public-site .product-story .product-actions a{position:relative;overflow:hidden;border-bottom:1px solid #8bbdff30;padding-bottom:8px;transition:color .3s,border-color .3s}
+.public-site .product-story .product-actions svg{transition:transform .4s var(--vm-interact-ease)}
+@media(hover:hover) and (pointer:fine){
+ .public-site :is(.route-card,.product-hub-card)[data-vm-over="true"]{border-color:#75b4ff99;box-shadow:0 12px 30px #00000026}
+ .public-site :is(.route-card,.product-hub-card)[data-vm-over="true"]::after{transform:scaleX(1)}
+ .public-site .product-story[data-vm-over="true"] .product-visual::after{opacity:1}
+ .public-site .product-story .product-actions a:hover{color:#e6f5ff;border-color:#a4d4ff}
+ .public-site .product-story .product-actions a:hover svg{transform:translate(4px,-2px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .public-site :is(.route-card,.product-hub-card)::after,.public-site .product-story .product-visual::after,.public-site .product-story .product-actions svg{transition:none}
+ .public-site :is(.header-cta,.primary-button,.text-button,.final-cta-primary,.final-cta-secondary).vm-press{transform:none!important}
 }

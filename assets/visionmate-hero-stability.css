@@ -1,0 +1,9 @@
+/* Keep the copy's optical anchor stable between chapters. */
+@media(min-width:701px){
+ .public-site.home-route .pin-hero-copy .pin-desc{min-height:3.7em}
+}
+.public-site.home-route .pin-hero-copy h1{overflow-anchor:none}
+.public-site.home-route .pin-count{font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){
+ .public-site.home-route .pin-hero-copy{scroll-behavior:auto}
+}

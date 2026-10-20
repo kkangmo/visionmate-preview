@@ -1,0 +1,40 @@
+/* A quiet handoff from the film to the business introduction. */
+.public-site.home-route .pin-journey .scroll-film::after{
+ content:"";position:absolute;inset:auto 0 0;height:clamp(100px,16vh,180px);
+ background:linear-gradient(0deg,#050a12 0%,#050a1299 30%,#050a1200 100%);
+ z-index:1;pointer-events:none;
+}
+.public-site.home-route .vm-positioning{
+ display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+ grid-template-rows:auto auto auto minmax(0,1fr);
+ gap:0 88px;padding:80px 0 96px;align-items:start;
+}
+.public-site.home-route .vm-positioning-head{display:contents}
+.public-site.home-route .vm-positioning-head>.vm-eyebrow{grid-column:1/-1;margin:0 0 24px;color:#8fa9cb;letter-spacing:.14em}
+.public-site.home-route .vm-positioning h2{
+ grid-column:1/-1;max-width:1060px;margin:0 0 52px;
+ font-size:clamp(36px,4.5vw,62px);line-height:1.35;letter-spacing:-.045em;
+}
+.public-site.home-route .vm-positioning h2 em{color:#b4cbe8}
+.public-site.home-route .vm-positioning-head>.vm-lead{grid-column:1;grid-row:3;margin:0 0 26px;max-width:440px;line-height:1.95}
+.public-site.home-route .vm-positioning-head>.vm-inline-link{grid-column:1;grid-row:4;justify-self:start;align-self:start}
+.public-site.home-route .vm-positioning .vm-operating-model{
+ grid-column:2;grid-row:3/5;padding:0;background:none;border:0;border-radius:0;
+}
+.public-site.home-route .vm-positioning .vm-model-label{margin:0;padding:0 0 18px;border-bottom:1px solid var(--vm-rule);font-size:11px;color:#879fbd}
+.public-site.home-route .vm-positioning .vm-model-row{padding:20px 0;gap:20px}
+.public-site.home-route .vm-positioning .vm-model-row h3{font-size:17px;margin-bottom:6px}
+.public-site.home-route .vm-positioning .vm-model-row p{font-size:13px}
+.public-site.home-route .vm-positioning .vm-feedback{padding-top:20px;color:#7f9abb}
+@media(max-width:1000px){
+ .public-site.home-route .vm-positioning{column-gap:48px}
+}
+@media(max-width:700px){
+ .public-site.home-route .vm-positioning{grid-template-columns:1fr;grid-template-rows:none;padding:56px 0 64px;gap:0}
+ .public-site.home-route .vm-positioning h2{font-size:clamp(28px,5.6vw,38px);margin-bottom:28px;line-height:1.45}
+ .public-site.home-route .vm-positioning-head>.vm-eyebrow{margin-bottom:20px}
+ .public-site.home-route .vm-positioning-head>.vm-lead{grid-row:auto;margin-bottom:20px;max-width:none}
+ .public-site.home-route .vm-positioning-head>.vm-inline-link{grid-row:auto;margin-bottom:40px}
+ .public-site.home-route .vm-positioning .vm-operating-model{grid-column:1;grid-row:auto}
+ .public-site.home-route .vm-positioning .vm-model-row h3{font-size:16px}
+}
