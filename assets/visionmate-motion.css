@@ -1,0 +1,99 @@
+/* Interaction layer: preserve the film's layout and scroll controller. */
+.public-site {
+  --vm-ease: cubic-bezier(.22,1,.36,1);
+  --vm-light: #8cddff;
+}
+.public-site :is(.primary-button,.header-cta,.final-cta-primary,.text-button,.final-cta-secondary) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: background-color 220ms, border-color 220ms, box-shadow 220ms, transform 220ms var(--vm-ease), color 220ms;
+}
+.public-site :is(.primary-button,.header-cta,.final-cta-primary) {
+  border: 1px solid rgba(139,190,255,.48);
+  background: linear-gradient(120deg,#286ef4,#2057ce);
+  box-shadow: inset 0 1px 0 #ffffff26,0 5px 20px #1f65e821;
+}
+.public-site :is(.primary-button,.header-cta,.final-cta-primary)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(ellipse at 30% 0%,#a9eaff66,transparent 75%);
+  transition: opacity 220ms;
+}
+.public-site :is(.text-button,.final-cta-secondary) {
+  border: 1px solid #90b8ef38;
+  border-radius: 10px;
+  padding: 0 20px;
+  min-height: 48px;
+  color: #eaf4ff;
+  background: #0c172899;
+}
+.public-site :is(.primary-button,.text-button,.final-cta-primary,.final-cta-secondary) svg {
+  flex-shrink: 0;
+  transition: transform 220ms var(--vm-ease);
+}
+.public-site .desktop-nav a {
+  position: relative;
+  transition: color 200ms;
+}
+.public-site .desktop-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,#478bff,#83e5ff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms var(--vm-ease);
+}
+.public-site .desktop-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.public-site :is(a,button):focus-visible { outline: 2px solid var(--vm-light); outline-offset: 5px; }
+.public-site :is(.primary-button,.header-cta,.final-cta-primary,.text-button,.final-cta-secondary):active {
+  transform: translateY(1px) scale(.98);
+}
+@media (hover:hover) and (pointer:fine) {
+  .public-site :is(.primary-button,.header-cta,.final-cta-primary):hover {
+    border-color: #a5dfff;
+    background: linear-gradient(120deg,#327cfb,#2362df);
+    box-shadow: inset 0 1px 0 #ffffff40,0 8px 26px #2377ef40;
+    transform: translateY(-2px);
+  }
+  .public-site :is(.primary-button,.header-cta,.final-cta-primary):hover::before { opacity: 1; }
+  .public-site :is(.text-button,.final-cta-secondary):hover { border-color: #83cdff99; background: #132841cc; color: #fff; }
+  .public-site :is(.primary-button,.text-button,.final-cta-primary,.final-cta-secondary):hover svg { transform: translateX(4px); }
+  .public-site .desktop-nav a:hover::after { transform: scaleX(1); }
+  .public-site .desktop-nav a:hover { color: #eef9ff; }
+  .public-site :is(.ss-sel,.pin-stage-btn):hover { color: #fff; border-color: #87cfff80; }
+}
+.public-site.home-route .pin-stage-btn {
+  transition: color 220ms, background-color 220ms;
+}
+.public-site.home-route .pin-stage-btn.active span { color: #b1e8ff; text-shadow: 0 0 18px #63b8ff55; }
+.public-site .ss-sel { transition: border-color 220ms, background-color 220ms; }
+.public-site .ss-sel[aria-selected="true"] {
+  border-color: #7bcaffaa;
+  box-shadow: inset 3px 0 0 #69c9ff;
+}
+.public-site :is(.shift-headline,.proof-headline,.why-v2-headline) em {
+  color: #82d9ff;
+  background: linear-gradient(105deg,#b5eaff,#72c4ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+@media (max-width:600px) {
+  .public-site .hero-actions { gap: 12px; }
+  .public-site .hero-actions :is(.primary-button,.text-button) { min-height: 50px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .public-site :is(a,button,a::before,a::after,svg) { transition: none !important; }
+  .public-site :is(.primary-button,.header-cta,.final-cta-primary,.text-button,.final-cta-secondary):is(:hover,:active),
+  .public-site a:hover svg { transform: none !important; }
+}
