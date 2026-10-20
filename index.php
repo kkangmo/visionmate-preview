@@ -32,7 +32,7 @@ $title = $item['seoTitle'] ?? ($item ? $heading . ' | 비전메이트' : ($page[
 $canonical = $origin . ($path === '/' ? '/' : $path);
 $robots = (!$found || $slug === 'admin') ? 'noindex,nofollow' : 'index,follow';
 $settings = $data['settings'];
-$labels = ['legal_name'=>'상호', 'representative_name'=>'대표자', 'business_number'=>'사업자등록번호', 'company_address'=>'사업장 주소', 'company_phone'=>'대표 전화', 'company_email'=>'문의 이메일'];
+$labels = ['legal_name'=>'상호', 'representative_name'=>'대표자', 'business_number'=>'사업자등록번호', 'company_address'=>'본사', 'company_seoul_address'=>'서울사무소', 'company_phone'=>'대표전화', 'company_mobile'=>'휴대전화', 'company_email'=>'문의 이메일', 'privacy_officer'=>'개인정보 보호책임자'];
 $company = [];
 foreach ($labels as $key => $label) {
     if (($settings['company_info_enabled'] ?? '') === 'true' && ($settings[$key . '_visible'] ?? '') === 'true' && trim($settings[$key] ?? '') !== '') {

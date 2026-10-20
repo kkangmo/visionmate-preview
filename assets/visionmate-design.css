@@ -1,4 +1,17 @@
 /* Site-wide visual refinement. No video, canvas, pinning or scroll rules. */
+.public-site .site-footer .footer-company-info {
+  grid-column: 1 / -1; display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px 32px;
+  padding: 32px 0; margin: 24px 0 0; border-top: 1px solid #ffffff1a;
+}
+.public-site .footer-company-info > div { display: block; min-width: 0; }
+.public-site .footer-company-info dt { color: #8fa2bb; font-size: 12px; margin-bottom: 8px; }
+.public-site .footer-company-info dd { color: #c8d6e8; font-size: 14px; line-height: 1.8; margin: 0; word-break: keep-all; overflow-wrap: anywhere; }
+.public-site :is(.footer-company-info,.company-info-list) a { color: inherit; text-decoration: none; }
+.public-site :is(.footer-company-info,.company-info-list) a:hover { color: #90c9ff; text-decoration: underline; text-underline-offset: 4px; }
+@media(max-width:700px) {
+  .public-site .site-footer .footer-company-info { grid-template-columns: 1fr; gap: 18px; }
+}
 .public-site .product-visual { flex-direction: column; gap: 22px; }
 .public-site .product-visual-caption {
   margin: 0; color: #93a8bf; font-size: 12px; line-height: 1.6;
