@@ -71,6 +71,7 @@ ob_start();
 <?php if (!empty($item[$key])): ?><section><h2><?= $label ?></h2><p><?= $escape($item[$key]) ?></p></section><?php endif; ?>
 <?php endforeach; ?>
 <?php elseif ($found && in_array($slug, ['home','solutions','products'], true)): ?>
+<?php if ($slug === 'home'): ?><section><h2>가능성을 읽고, 작동하는 비즈니스를 만듭니다.</h2><p>아이디어가 서비스가 되고, 흩어진 업무가 하나의 흐름이 되도록. 비전메이트는 전략과 AI·데이터·개발을 연결하는 비즈니스 빌더입니다.</p><p>발견 → 설계 → 구축 → 연결 → 운영. 각 단계의 결과가 다음 판단의 근거가 됩니다.</p></section><?php endif; ?>
 <?php foreach (($slug === 'home' ? ['solutions','products'] : [$slug]) as $group): ?>
 <section><h2><?= $group === 'solutions' ? 'AI 솔루션' : '직접 만들고 운영하는 서비스' ?></h2>
 <?php foreach ($data[$group] as $entry): ?><article><h3><a style="color:#99caff" href="/<?= $group ?>/<?= $escape($entry['slug']) ?>"><?= $escape($entry['title'] ?? $entry['name']) ?></a></h3><p><?= $escape($entry['shortDescription'] ?? $entry['description']) ?></p></article><?php endforeach; ?></section>
