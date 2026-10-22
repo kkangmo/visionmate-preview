@@ -1,0 +1,369 @@
+/* MateGift Lab — home card + detail section (2026-10-22)
+   Reuses the home product-story card, pv-window mockup frame, section-heading and primary-button.
+   :is(.public-site, #vm-lab) gives id-level specificity over the base bundle. */
+
+:is(.public-site, #vm-lab) {
+  --lab-teal: #35e6c5;
+  --lab-teal-line: rgba(53, 230, 197, .28);
+  --lab-amber: #f2c46d;
+  --lab-panel: #0b1727;
+  --lab-panel-2: #0e1d31;
+  --lab-text: var(--cinema-text, #f7fbff);
+  --lab-body: var(--vm-body, #b5c2d4);
+  --lab-muted: #8fa1ba;
+  --lab-border: var(--vm-border, rgba(135, 176, 231, .17));
+}
+
+/* ---------- Card ---------- */
+:is(.public-site, #vm-lab) .home-cinematic .product-story.lab-story {
+  border-color: var(--lab-teal-line);
+  background:
+    radial-gradient(120% 90% at 0% 0%, rgba(53, 230, 197, .07), transparent 55%),
+    var(--lab-panel);
+  min-height: 520px;
+}
+:is(.public-site, #vm-lab) .lab-story .product-top > span { color: var(--lab-teal); }
+:is(.public-site, #vm-lab) .home-cinematic .lab-story .product-copy h3 {
+  margin: 20px 0 16px;
+}
+:is(.public-site, #vm-lab) .lab-subname {
+  display: block;
+  margin-top: 8px;
+  color: var(--lab-muted);
+  font-family: Inter, Pretendard, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+:is(.public-site, #vm-lab) .home-cinematic .lab-story .product-copy > p.lab-headline {
+  margin: 0 0 14px;
+  color: var(--lab-text);
+  font-size: clamp(21px, 2.1vw, 27px);
+  font-weight: 650;
+  line-height: 1.42;
+  letter-spacing: -.02em;
+  word-break: keep-all;
+}
+:is(.public-site, #vm-lab) .home-cinematic .lab-story .product-copy > p {
+  max-width: 520px;
+  word-break: keep-all;
+}
+:is(.public-site, #vm-lab) .lab-story .lab-flow { margin-top: 22px; }
+:is(.public-site, #vm-lab) .lab-story .lab-flow li > span { color: var(--lab-teal); }
+:is(.public-site, #vm-lab) .lab-story .product-actions.lab-actions {
+  align-items: center;
+  gap: 14px 24px;
+  padding-top: 28px;
+}
+:is(.public-site, #vm-lab) .lab-story .product-actions.lab-actions a.primary-button {
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 10px;
+  color: #fff;
+}
+:is(.public-site, #vm-lab) .home-cinematic .lab-story .product-copy > p.lab-built {
+  margin: 18px 0 0;
+  color: var(--lab-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Example UI */
+:is(.public-site, #vm-lab) .product-visual > .pv-window.lab-plan {
+  min-height: 0;
+  height: auto;
+  max-width: 480px;
+}
+:is(.public-site, #vm-lab) .lab-plan .pv-title {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--lab-body);
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+:is(.public-site, #vm-lab) .lab-example-badge {
+  margin-left: auto;
+  padding: 3px 9px;
+  border: 1px solid rgba(242, 196, 109, .45);
+  border-radius: 999px;
+  color: var(--lab-amber);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+:is(.public-site, #vm-lab) .lab-plan-body { padding: 18px 20px 20px; }
+:is(.public-site, #vm-lab) .lab-plan-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px dashed var(--lab-border);
+  border-radius: 10px;
+}
+:is(.public-site, #vm-lab) .lab-plan-input span {
+  color: var(--lab-teal);
+  font-size: 12px;
+  font-weight: 700;
+}
+:is(.public-site, #vm-lab) .lab-plan-input p {
+  margin: 0;
+  color: var(--lab-body);
+  font-size: 13px;
+}
+:is(.public-site, #vm-lab) .lab-plan-label {
+  margin: 18px 0 10px;
+  color: var(--lab-text);
+  font-size: 14px;
+  font-weight: 700;
+}
+:is(.public-site, #vm-lab) .lab-plan-rows {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+:is(.public-site, #vm-lab) .lab-plan-rows li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid var(--lab-border);
+  border-radius: 10px;
+  background: var(--lab-panel-2);
+}
+:is(.public-site, #vm-lab) .lab-plan-seg { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+:is(.public-site, #vm-lab) .lab-plan-seg b { color: var(--lab-text); font-size: 14px; font-weight: 650; }
+:is(.public-site, #vm-lab) .lab-plan-seg em { color: var(--lab-muted); font-size: 12px; font-style: normal; }
+:is(.public-site, #vm-lab) .lab-plan-count { color: var(--lab-body); font-size: 14px; font-weight: 600; }
+:is(.public-site, #vm-lab) .lab-plan-bar {
+  grid-column: 1 / -1;
+  display: block;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--lab-teal), rgba(47, 124, 255, .7));
+  opacity: .7;
+}
+:is(.public-site, #vm-lab) .lab-plan-bar.is-wide { width: 100%; }
+:is(.public-site, #vm-lab) .lab-plan-bar.is-mid { width: 64%; }
+:is(.public-site, #vm-lab) .lab-plan-bar.is-narrow { width: 34%; }
+:is(.public-site, #vm-lab) .lab-plan-budget {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--lab-border);
+}
+:is(.public-site, #vm-lab) .lab-plan-budget span { color: var(--lab-muted); font-size: 13px; }
+:is(.public-site, #vm-lab) .lab-plan-budget b { color: var(--lab-text); font-size: 15px; font-weight: 650; }
+:is(.public-site, #vm-lab) .lab-plan-note {
+  margin: 10px 0 0;
+  color: var(--lab-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+/* ---------- Detail section ---------- */
+:is(.public-site, #vm-lab) .lab-detail {
+  padding-top: var(--vm-polish-section-y, 112px);
+  padding-bottom: var(--vm-polish-section-y, 112px);
+  border-top: 1px solid var(--lab-border);
+}
+:is(.public-site, #vm-lab) .lab-detail > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+:is(.public-site, #vm-lab) .lab-detail-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+:is(.public-site, #vm-lab) .lab-detail .section-heading { margin: 0; }
+:is(.public-site, #vm-lab) .lab-detail .section-label { color: var(--lab-teal); }
+:is(.public-site, #vm-lab) .lab-detail .section-heading h2 {
+  color: var(--lab-text);
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.25;
+  letter-spacing: -.03em;
+  word-break: keep-all;
+}
+:is(.public-site, #vm-lab) .lab-detail-body > p {
+  margin: 0 0 14px;
+  color: var(--lab-body);
+  font-size: 17px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+:is(.public-site, #vm-lab) .lab-segments {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border: 1px solid var(--lab-border);
+  border-radius: 14px;
+  background: var(--lab-panel);
+}
+:is(.public-site, #vm-lab) .lab-segments-label {
+  color: var(--lab-teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+:is(.public-site, #vm-lab) .lab-segments p {
+  margin: 6px 0 14px;
+  color: var(--lab-body);
+  font-size: 15px;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+:is(.public-site, #vm-lab) .lab-segments ol,
+:is(.public-site, #vm-lab) .lab-compare ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+:is(.public-site, #vm-lab) .lab-segments li,
+:is(.public-site, #vm-lab) .lab-compare li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--lab-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+:is(.public-site, #vm-lab) .lab-segments li:not(:last-child)::after,
+:is(.public-site, #vm-lab) .lab-compare li:not(:last-child)::after {
+  content: "→";
+  color: rgba(53, 230, 197, .6);
+  font-weight: 400;
+}
+
+:is(.public-site, #vm-lab) .lab-features {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 56px;
+}
+:is(.public-site, #vm-lab) .lab-features article {
+  padding: 22px 20px;
+  border: 1px solid var(--lab-border);
+  border-radius: 14px;
+  background: var(--lab-panel);
+}
+:is(.public-site, #vm-lab) .lab-features span {
+  color: var(--lab-teal);
+  font-family: Inter, Pretendard, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+:is(.public-site, #vm-lab) .home-cinematic .lab-features h3 {
+  margin: 12px 0 8px;
+  color: var(--lab-text);
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+:is(.public-site, #vm-lab) .lab-features p {
+  margin: 0;
+  color: var(--lab-body);
+  font-size: 14px;
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
+:is(.public-site, #vm-lab) .lab-compare {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+:is(.public-site, #vm-lab) .lab-compare-col {
+  padding: 22px 24px;
+  border: 1px solid var(--lab-border);
+  border-radius: 14px;
+}
+:is(.public-site, #vm-lab) .lab-compare-col.is-new {
+  border-color: var(--lab-teal-line);
+  background: radial-gradient(100% 120% at 100% 0%, rgba(53, 230, 197, .08), transparent 60%), var(--lab-panel);
+}
+:is(.public-site, #vm-lab) .lab-compare-col > span {
+  color: var(--lab-muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+:is(.public-site, #vm-lab) .lab-compare-col.is-new > span { color: var(--lab-teal); }
+:is(.public-site, #vm-lab) .home-cinematic .lab-compare-col h3 {
+  margin: 8px 0 14px;
+  color: var(--lab-text);
+  font-size: 20px;
+  font-weight: 650;
+}
+:is(.public-site, #vm-lab) .lab-compare-col.is-old h3,
+:is(.public-site, #vm-lab) .lab-compare-col.is-old li { color: var(--lab-muted); }
+
+:is(.public-site, #vm-lab) .lab-detail-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  margin-top: 32px;
+}
+:is(.public-site, #vm-lab) .lab-detail-foot p {
+  margin: 0;
+  max-width: 620px;
+  color: var(--lab-muted);
+  font-size: 14px;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+:is(.public-site, #vm-lab) .lab-detail-foot .primary-button {
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  :is(.public-site, #vm-lab) .lab-features { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  :is(.public-site, #vm-lab) .lab-detail-intro { grid-template-columns: 1fr; }
+  :is(.public-site, #vm-lab) .lab-features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  :is(.public-site, #vm-lab) .lab-features article:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  :is(.public-site, #vm-lab) .lab-compare { grid-template-columns: 1fr; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  :is(.public-site, #vm-lab) .home-cinematic .product-story.lab-story { min-height: 0; }
+  :is(.public-site, #vm-lab) .home-cinematic .lab-story .product-copy > p.lab-headline { font-size: 21px; }
+  :is(.public-site, #vm-lab) .lab-story .product-actions.lab-actions { flex-direction: column; align-items: stretch; }
+  :is(.public-site, #vm-lab) .lab-story .product-actions.lab-actions a { justify-content: center; }
+  :is(.public-site, #vm-lab) .product-visual > .pv-window.lab-plan { max-width: none; }
+  :is(.public-site, #vm-lab) .lab-plan-body { padding: 14px; }
+  /* base mobile rule gives every .product-visual span 88px height; undo it inside the example UI */
+  :is(.public-site, #vm-lab) .product-visual .lab-plan span { min-height: 0; padding: 0; }
+  :is(.public-site, #vm-lab) .product-visual .lab-plan .lab-example-badge { padding: 3px 9px; }
+  :is(.public-site, #vm-lab) .home-cinematic .product-visual:has(.lab-plan) { min-height: 0; }
+  :is(.public-site, #vm-lab) .lab-plan .pv-dot { display: none; }
+  :is(.public-site, #vm-lab) .lab-detail .section-heading h2 { font-size: 28px; }
+  :is(.public-site, #vm-lab) .lab-detail-body > p { font-size: 16px; }
+  :is(.public-site, #vm-lab) .lab-segments ol { flex-direction: column; gap: 6px; }
+  :is(.public-site, #vm-lab) .lab-segments li:not(:last-child)::after { content: "↓"; }
+  :is(.public-site, #vm-lab) .lab-features { grid-template-columns: 1fr; gap: 10px; margin-top: 40px; }
+  :is(.public-site, #vm-lab) .lab-features article { padding: 18px; }
+  :is(.public-site, #vm-lab) .lab-detail-foot .primary-button { width: 100%; justify-content: center; }
+}
