@@ -143,3 +143,6 @@
 #vm-a2 ol{padding:0}
 html.vm-a2-on .home-route main.home-cinematic > section:not(.pin-journey){display:none!important}
 #vm-a2 .more-link{color:var(--teal);font-size:14px;display:inline-block;margin-bottom:10px}
+#vm-a2 .cost{display:flex;gap:14px;align-items:flex-start;margin-top:26px;padding:18px 20px;border:1px solid rgba(62,230,212,.35);border-radius:14px;background:rgba(62,230,212,.06)}
+#vm-a2 .cost b{flex:none;font-size:13px;color:var(--bg);background:var(--teal);padding:4px 10px;border-radius:99px}
+#vm-a2 .cost span{color:var(--text);font-size:15px;line-height:1.6}

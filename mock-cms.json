@@ -183,7 +183,46 @@
         "metaDescription": "검색과 콘텐츠가 쌓이는 성장 구조. 검색에 노출되는 정보 구조와 콘텐츠 발행, 유입부터 문의까지의 측정 흐름을 설계합니다."
       }
     ],
-    "cases": [],
+    "cases": [
+      {
+        "id": "mategift-distribution-ai",
+        "slug": "mategift-distribution-ai",
+        "status": "PUBLISHED",
+        "projectType": "LIVE",
+        "name": "유통 × AI: 판촉물 몰 운영에서 출발한 AI 기획 서비스",
+        "subtitle": "메이트기프트 × MateGift Lab · 운영비를 최소화한 판촉 기획 시스템",
+        "problem": "판촉물 사이트에는 상품이 너무 많습니다. 담당자는 수많은 상품을 검색하고 비교하다 지치고, 결국 익숙한 상품을 고르게 됩니다. 비전메이트는 판촉물 몰 메이트기프트를 직접 운영하며 이 문제를 매일 마주했습니다.",
+        "systemBuilt": "목적·수량·1인 예산만 입력하면 실속·균형·프리미엄 3가지 기획안으로 정리하는 MateGift Lab을 만들고, 메이트기프트의 상품·상담·견적 흐름과 연결했습니다.",
+        "capabilities": "기획안 3종 제안 · 대상별 예산 배분 · 유통 조건(단가·최소 수량·인쇄·제작 기간) 반영 · 운영비를 최소화한 구조",
+        "currentStage": "운영 중",
+        "approach": "상품을 더 보여 주는 대신 선택지를 줄였습니다. 박람회처럼 받는 사람이 나뉘는 행사는 일반 방문객·상담 고객·VIP로 나눠 예산을 배분합니다. 몰을 운영하며 쌓은 단가·최소 수량·인쇄 조건을 기준으로 상품을 분석하고, 실행 중 AI 호출을 최소화해 이용이 늘어도 운영비가 쌓이지 않도록 설계했습니다. 가격·재고·인쇄·납기는 견적 단계에서 담당자가 최종 확인합니다.",
+        "howItWorks": "행사 이해 · 상품 분석 · 기획안 3종 구성 · 견적 연결",
+        "relatedSolution": "ai-business",
+        "featuredOnHome": false,
+        "homeSortOrder": 1,
+        "publishedTitle": "유통 × AI 판촉 기획 사례 | VisionMate",
+        "publishedDescription": "판촉물 몰을 운영하며 겪은 '상품이 너무 많아 고르기 어렵다'는 문제를, 운영비를 최소화한 AI 기획 서비스로 풀었습니다."
+      },
+      {
+        "id": "pungsumate",
+        "slug": "pungsumate",
+        "status": "PUBLISHED",
+        "projectType": "IN_DEVELOPMENT",
+        "name": "풍수메이트: 운영비가 쌓이지 않는 사주·생활풍수 서비스",
+        "subtitle": "B2C 서비스 기획 · 개인정보를 기기 안에서 처리하는 구조",
+        "problem": "사주 서비스는 생년월일 같은 민감한 정보를 다루고, AI로 풀이를 만들면 이용자가 늘수록 비용도 함께 늘어납니다. 풀이가 어렵거나 근거 없이 단정적인 경우도 많습니다.",
+        "systemBuilt": "출생 정보를 이용자 기기 안에서 계산하고, 성향·재물운·직업운·관계운을 쉬운 말로 풀이하는 서비스를 만들었습니다.",
+        "capabilities": "실행 중 AI 호출 없는 구조 · 기기 안 계산 · 영역별 쉬운 풀이 · 전문가 검토 후 공개",
+        "currentStage": "개발 중",
+        "approach": "실행 중 AI를 부르지 않는 구조로 만들어, 이용자가 늘어도 AI 사용료가 쌓이지 않습니다. 출생 정보는 서버로 보내지 않고 기기 안에서만 계산합니다. 사주에 맞춘 추천은 전문가 검토를 마친 뒤에만 공개합니다.",
+        "howItWorks": "출생 정보 입력 · 기기 안 계산 · 영역별 풀이 · 이번 주 기록",
+        "relatedSolution": "ai-business",
+        "featuredOnHome": false,
+        "homeSortOrder": 2,
+        "publishedTitle": "풍수메이트 구축 사례 | VisionMate",
+        "publishedDescription": "실행 중 AI 호출 없이 운영비가 쌓이지 않고, 개인정보를 기기 안에서 처리하는 사주·생활풍수 서비스."
+      }
+    ],
     "products": [
       {
         "id": "mategift",
