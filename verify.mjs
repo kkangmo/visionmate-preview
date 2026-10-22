@@ -51,7 +51,7 @@ for (const vp of VIEWPORTS) {
 
     // 1. 404 여부
     const title = await page.title();
-    title.includes("VisionMate") ? pass(`${vp.name}: title OK`) : fail(`${vp.name}: title="${title}"`);
+    (title.includes("VisionMate") || title.includes("비전메이트")) ? pass(`${vp.name}: title OK`) : fail(`${vp.name}: title="${title}"`);
 
     // 2. Hero
     const hero = await page.evaluate(() => !!document.querySelector(".pin-journey"));
