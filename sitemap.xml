@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.visionmate.co.kr/</loc></url>
-  <url><loc>https://www.visionmate.co.kr/solutions</loc></url>
-  <url><loc>https://www.visionmate.co.kr/solutions/ai-business</loc></url>
-  <url><loc>https://www.visionmate.co.kr/solutions/ai-system</loc></url>
-  <url><loc>https://www.visionmate.co.kr/solutions/automation</loc></url>
-  <url><loc>https://www.visionmate.co.kr/solutions/growth</loc></url>
-  <url><loc>https://www.visionmate.co.kr/products</loc></url>
-  <url><loc>https://www.visionmate.co.kr/products/mategift</loc></url>
-  <url><loc>https://www.visionmate.co.kr/products/mategift-lab</loc></url>
-  <url><loc>https://www.visionmate.co.kr/about</loc></url>
-  <url><loc>https://www.visionmate.co.kr/contact</loc></url>
+  <url><loc>https://www.visionmate.co.kr/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/solutions</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/solutions/ai-business</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/solutions/ai-system</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/solutions/automation</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/solutions/growth</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/cases</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/cases/mategift-distribution-ai</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/cases/pungsumate</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/products</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/products/mategift</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/products/mategift-lab</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/products/pungsumate</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/products/trendmate</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/ai-search</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/about</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/insights</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://www.visionmate.co.kr/contact</loc><lastmod>2026-10-22</lastmod></url>
 </urlset>
