@@ -1,0 +1,59 @@
+/* VisionMate polish layer (2026-10-22)
+   Loaded last. Only raises tiny text, fixes low-contrast labels and evens out section spacing.
+   Selectors use :is(.public-site, #vm-polish) to get id-level specificity over the base bundle.
+   Remove this file's <link> to roll back. */
+
+:root {
+  --vm-polish-label: #9fb0c8;      /* secondary label, ~7:1 on #070b14 */
+  --vm-polish-muted: #8193ad;      /* weakest allowed text, ~5:1 */
+  --vm-polish-section-y: clamp(72px, 8.5vw, 124px);
+}
+
+/* 1. Minimum 12px for eyebrows, kickers and labels */
+:is(.public-site, #vm-polish) .hero-eyebrow,
+:is(.public-site, #vm-polish) .pin-scroll-cue,
+:is(.public-site, #vm-polish) .vm-eyebrow,
+:is(.public-site, #vm-polish) .vm-model-label,
+:is(.public-site, #vm-polish) .vm-feedback,
+:is(.public-site, #vm-polish) .ss-kicker,
+:is(.public-site, #vm-polish) .ss-stage-num,
+:is(.public-site, #vm-polish) .final-cta-label,
+:is(.public-site, #vm-polish) .product-top span,
+:is(.public-site, #vm-polish) .tag-row span,
+:is(.public-site, #vm-polish) .ss-sel-num,
+:is(.public-site, #vm-polish) .ss-sel-body strong,
+:is(.public-site, #vm-polish) .vm-step-output span,
+:is(.public-site, #vm-polish) .ss-forwho span {
+  font-size: 12px;
+}
+
+/* Hero step buttons: 10px -> 12px numbers, 11px names */
+:is(.public-site, #vm-polish) .pin-stage-btn b { font-size: 12px; }
+:is(.public-site, #vm-polish) .pin-stage-btn span { font-size: 11px; letter-spacing: .08em; }
+
+/* 2. Low-contrast labels */
+:is(.public-site, #vm-polish) .vm-visual-chrome span {
+  font-size: 11px;
+  color: var(--vm-polish-muted);
+}
+:is(.public-site, #vm-polish) .vm-solution-visual figcaption {
+  font-size: 12px;
+  color: var(--vm-polish-muted);
+}
+:is(.public-site, #vm-polish) .vm-step-index span {
+  color: var(--vm-polish-label);
+}
+:is(.public-site, #vm-polish) .vm-step-output span,
+:is(.public-site, #vm-polish) .ss-forwho span {
+  color: var(--vm-polish-label);
+}
+
+/* 3. Even section rhythm */
+:is(.public-site, #vm-polish) .vm-positioning,
+:is(.public-site, #vm-polish) .products-section,
+:is(.public-site, #vm-polish) .solutions-showcase,
+:is(.public-site, #vm-polish) .vm-process,
+:is(.public-site, #vm-polish) .final-cta-redesign {
+  padding-top: var(--vm-polish-section-y);
+  padding-bottom: var(--vm-polish-section-y);
+}
