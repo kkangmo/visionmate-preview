@@ -1,0 +1,292 @@
+/* VisionMate detail layer: case & product hub/detail pages in the A2 (AX tech) language.
+   Scoped to those page mains only. The home hero is never touched. */
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) {
+  --vp-bg: #05080F; --vp-panel: #0A0F1A; --vp-line: rgba(255,255,255,.08);
+  --vp-text: #E8EDF5; --vp-mute: #8A94A6; --vp-teal: #3EE6D4; --vp-blue: #5B8CFF;
+  background: var(--vp-bg); color: var(--vp-text); overflow-x: clip;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) > section {
+  max-width: 1240px; margin: 0 auto; padding-left: 24px; padding-right: 24px; box-sizing: border-box;
+}
+
+/* ---------- Hero ---------- */
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) > .page-hero {
+  max-width: none; position: relative; padding-top: clamp(140px, 16vw, 200px); padding-bottom: clamp(72px, 8vw, 112px);
+  border-bottom: 1px solid var(--vp-line); overflow: hidden; isolation: isolate; min-height: 0;
+  background:
+    radial-gradient(50% 70% at 85% 10%, rgba(62,230,212,.14), transparent 70%),
+    radial-gradient(40% 60% at 10% 100%, rgba(91,140,255,.10), transparent 70%),
+    var(--vp-bg);
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) > .page-hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .5;
+  background-image: linear-gradient(var(--vp-line) 1px, transparent 1px), linear-gradient(90deg, var(--vp-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(70% 80% at 70% 20%, #000, transparent 75%); mask-image: radial-gradient(70% 80% at 70% 20%, #000, transparent 75%);
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) > .page-hero::after { display: none; }
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) > .page-hero > div {
+  max-width: 1240px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: grid; gap: 24px;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) .page-hero .hero-eyebrow {
+  display: flex; align-items: center; gap: 10px; margin: 0;
+  font: 600 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .18em; text-transform: uppercase; color: var(--vp-teal);
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) .page-hero .hero-eyebrow::before {
+  content: ""; width: 24px; height: 1px; background: var(--vp-teal);
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) .page-hero h1 {
+  margin: 0; max-width: 18ch; font-size: clamp(38px, 5.6vw, 84px); line-height: 1.06; letter-spacing: -.05em; font-weight: 700; color: var(--vp-text);
+  word-break: keep-all;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page, .cases-hub-page, .products-hub-page) .page-hero h1 + p {
+  margin: 0; max-width: 620px; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.75; color: var(--vp-mute); word-break: keep-all;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .page-hero .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+:is(.public-site, #vm-detail) .case-detail-page .page-hero .stage { display: none; }
+:is(.public-site, #vm-detail) .case-detail-page .page-hero .project-type {
+  display: inline-flex; align-items: center; gap: 10px; padding: 9px 16px; border-radius: 99px;
+  border: 1px solid rgba(62,230,212,.4); background: rgba(62,230,212,.08); color: var(--vp-teal);
+  font-size: 13px; font-weight: 600; letter-spacing: .02em;
+}
+:is(.public-site, #vm-detail) .case-detail-page .page-hero .project-type::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--vp-teal);
+  box-shadow: 0 0 0 0 rgba(62,230,212,.6); animation: vpPulse 2s infinite;
+}
+@keyframes vpPulse { 70% { box-shadow: 0 0 0 8px rgba(62,230,212,0); } 100% { box-shadow: 0 0 0 0 rgba(62,230,212,0); } }
+
+/* ---------- Buttons ---------- */
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .primary-button {
+  display: inline-flex; align-items: center; gap: 10px; padding: 16px 26px; border-radius: 99px; border: 0;
+  background: var(--vp-text); color: var(--vp-bg); font-weight: 600; text-decoration: none; box-shadow: none;
+  transition: transform .3s, box-shadow .3s;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .primary-button:hover { transform: translateY(-2px); box-shadow: 0 12px 30px -10px rgba(62,230,212,.6); }
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .text-button {
+  display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 99px;
+  border: 1px solid var(--vp-line); color: var(--vp-text); text-decoration: none; white-space: nowrap; transition: border-color .3s, background .3s;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .text-button:hover { border-color: rgba(62,230,212,.5); background: rgba(62,230,212,.06); }
+
+/* ---------- Case facts ---------- */
+:is(.public-site, #vm-detail) .case-detail-page .case-facts {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-top: 120px; padding-bottom: 40px;
+}
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article {
+  margin: 0; padding: 40px; border-radius: 22px; border: 1px solid var(--vp-line); background: var(--vp-panel);
+  min-height: 0; box-shadow: none; position: relative; overflow: hidden; display: grid; align-content: start; gap: 14px;
+}
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article:nth-child(4) { display: none; }
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article:first-child {
+  grid-column: 1 / -1; background: transparent; border: 0; border-top: 1px solid var(--vp-line); border-radius: 0;
+  padding: 44px 0 64px; grid-template-columns: minmax(160px, 3fr) 9fr; column-gap: 40px;
+}
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article:first-child span { grid-column: 1; grid-row: 1; }
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article:first-child h2 { grid-column: 1; grid-row: 2; }
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article:first-child p {
+  grid-column: 2; grid-row: 1 / span 3; margin: 0; color: var(--vp-text);
+  font-size: clamp(21px, 2.3vw, 32px); line-height: 1.55; letter-spacing: -.02em; font-weight: 500;
+}
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article span {
+  font: 500 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--vp-teal); letter-spacing: .12em; margin: 0;
+}
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article h2 {
+  margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0; color: var(--vp-mute); line-height: 1.4;
+}
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article p {
+  margin: 0; font-size: 18px; line-height: 1.75; color: #C9D1DE; word-break: keep-all;
+}
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article:nth-child(2)::after {
+  content: ""; position: absolute; inset: auto -30% -60% auto; width: 70%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(62,230,212,.12), transparent 65%); pointer-events: none;
+}
+/* capability chips (built by visionmate-detail.js) */
+:is(.public-site, #vm-detail) .case-detail-page .vp-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+:is(.public-site, #vm-detail) .case-detail-page .case-facts article .vp-chips > span,
+:is(.public-site, #vm-detail) .product-detail-page .capability-band .tag-row span {
+  font-family: inherit; font-size: 14px; font-weight: 500; line-height: 1.3; letter-spacing: 0; text-transform: none;
+  padding: 9px 14px; border-radius: 99px; border: 1px solid rgba(62,230,212,.35); background: rgba(62,230,212,.06); color: var(--vp-teal);
+}
+
+/* ---------- Approach / how it works ---------- */
+:is(.public-site, #vm-detail) :is(.case-detail-page .case-approach, .product-detail-page .product-detail) {
+  padding-top: 100px; padding-bottom: 100px; display: grid; gap: 56px;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .section-heading {
+  display: grid; grid-template-columns: minmax(160px, 3fr) 9fr; column-gap: 40px; row-gap: 18px; margin: 0; max-width: none;
+  border-top: 1px solid var(--vp-line); padding-top: 44px;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .section-label {
+  margin: 0; font: 600 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .16em; text-transform: uppercase; color: var(--vp-teal);
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .section-heading h2 {
+  grid-column: 2; margin: 0; font-size: clamp(30px, 3.8vw, 56px); line-height: 1.12; letter-spacing: -.04em; font-weight: 700; color: var(--vp-text); word-break: keep-all;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .section-heading .section-intro { grid-column: 2; margin: 0; max-width: 760px; }
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .section-heading .section-intro p { margin: 0; font-size: 18px; line-height: 1.8; color: #C9D1DE; word-break: keep-all; }
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .flow-strip {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0; margin: 0; position: relative;
+  border: 0; background: none; padding: 0;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .flow-strip::before {
+  content: ""; position: absolute; top: 7px; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, var(--vp-teal), var(--vp-blue) 70%, transparent);
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .flow-strip > div {
+  position: relative; padding: 40px 24px 0 0; margin: 0; border: 0; background: none; border-radius: 0; min-height: 0; display: grid; gap: 10px; box-shadow: none;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .flow-strip > div::before {
+  content: ""; position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-radius: 50%; box-sizing: border-box;
+  background: var(--vp-bg); border: 2px solid var(--vp-teal); box-shadow: 0 0 16px rgba(62,230,212,.45);
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .flow-strip span {
+  font: 500 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--vp-mute); letter-spacing: .12em;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .flow-strip b { font-size: 20px; font-weight: 600; letter-spacing: -.02em; color: var(--vp-text); }
+
+/* ---------- Product detail lead & capability band ---------- */
+:is(.public-site, #vm-detail) .product-detail-page .detail-lead {
+  display: grid; grid-template-columns: minmax(160px, 3fr) 9fr; column-gap: 40px; padding-top: 120px; padding-bottom: 20px;
+}
+:is(.public-site, #vm-detail) .product-detail-page .detail-lead > div { display: grid; gap: 14px; align-content: start; }
+:is(.public-site, #vm-detail) .product-detail-page .detail-lead h2 { margin: 0; font-size: 15px; font-weight: 600; color: var(--vp-mute); letter-spacing: 0; }
+:is(.public-site, #vm-detail) .product-detail-page .detail-lead > p {
+  margin: 0; color: var(--vp-text); font-size: clamp(21px, 2.3vw, 32px); line-height: 1.55; letter-spacing: -.02em; font-weight: 500; word-break: keep-all;
+}
+:is(.public-site, #vm-detail) .product-detail-page .capability-band {
+  display: grid; grid-template-columns: minmax(160px, 3fr) 9fr; column-gap: 40px; align-items: center;
+  padding: 32px 0 0; margin: 0; border: 0; border-top: 1px solid var(--vp-line); background: none; border-radius: 0;
+}
+:is(.public-site, #vm-detail) .product-detail-page .capability-band h3 { margin: 0; font-size: 15px; font-weight: 600; color: var(--vp-mute); }
+:is(.public-site, #vm-detail) .product-detail-page .capability-band .tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- Related panel & CTA ---------- */
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) > .related-panel {
+  display: flex; justify-content: space-between; align-items: center; gap: 32px; margin: 0 auto 24px;
+  padding: 40px 44px; border-radius: 22px; border: 1px solid var(--vp-line);
+  background: linear-gradient(120deg, rgba(62,230,212,.08), transparent 55%), var(--vp-panel);
+  max-width: calc(1240px - 48px); box-sizing: border-box;
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .related-panel > div { display: grid; gap: 10px; }
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .related-panel h2 { margin: 0; font-size: clamp(22px, 2.4vw, 32px); letter-spacing: -.03em; color: var(--vp-text); font-weight: 700; word-break: keep-all; }
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .related-panel p:not(.section-label) { margin: 0; color: var(--vp-mute); line-height: 1.7; max-width: 640px; }
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) > .detail-cta {
+  max-width: none; text-align: center; padding-top: 160px; padding-bottom: 180px; margin: 0; border: 0;
+  display: grid; justify-items: center; gap: 36px;
+  background: radial-gradient(60% 70% at 50% 100%, rgba(62,230,212,.18), transparent 70%);
+}
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .detail-cta h2 {
+  margin: 0; max-width: 16ch; font-size: clamp(32px, 4.8vw, 68px); line-height: 1.12; letter-spacing: -.045em; font-weight: 700; color: var(--vp-text); word-break: keep-all;
+}
+
+/* ---------- Hubs ---------- */
+:is(.public-site, #vm-detail) .cases-hub-page .cases-hub-content,
+:is(.public-site, #vm-detail) .products-hub-page .products-hub-content { padding-top: 100px; padding-bottom: 140px; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-list { display: grid; gap: 0; border-top: 1px solid var(--vp-line); }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card {
+  display: grid; grid-template-columns: 90px 1.1fr 1.4fr auto; gap: 32px; align-items: start; padding: 48px 8px;
+  border: 0; border-bottom: 1px solid var(--vp-line); border-radius: 0; background: none; color: inherit; text-decoration: none;
+  position: relative; transition: padding .4s, background .4s; box-shadow: none; min-height: 0;
+}
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card:hover { padding-left: 20px; background: linear-gradient(90deg, rgba(62,230,212,.07), transparent 70%); }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > span { font: 500 14px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--vp-teal); padding-top: 10px; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card h2 { margin: 0 0 12px; font-size: clamp(24px, 2.6vw, 36px); line-height: 1.2; letter-spacing: -.035em; color: var(--vp-text); word-break: keep-all; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > div > p { margin: 0; color: var(--vp-mute); line-height: 1.6; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card dl { margin: 0; display: grid; gap: 18px; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card dl div { display: grid; gap: 6px; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card dt { font-size: 13px; font-weight: 600; color: var(--vp-teal); }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card dd { margin: 0; color: #C9D1DE; line-height: 1.7; font-size: 15px;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > b {
+  align-self: center; display: inline-flex; gap: 8px; align-items: center; white-space: nowrap; font-size: 14px; font-weight: 600; color: var(--vp-teal);
+}
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card {
+  display: grid; align-content: start; gap: 16px; padding: 40px; border-radius: 22px; border: 1px solid var(--vp-line);
+  background: var(--vp-panel); color: inherit; text-decoration: none; min-height: 300px; position: relative; overflow: hidden;
+  transition: border-color .4s, transform .4s; box-shadow: none;
+}
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card::after {
+  content: ""; position: absolute; inset: auto -20% -50% auto; width: 60%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(62,230,212,.12), transparent 65%); opacity: 0; transition: opacity .5s; pointer-events: none;
+}
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card:hover { border-color: rgba(62,230,212,.45); transform: translateY(-4px); }
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card:hover::after { opacity: 1; }
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card > span { font: 600 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; color: var(--vp-teal); }
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card h2 { margin: 0; font-size: clamp(28px, 3vw, 40px); letter-spacing: -.04em; color: var(--vp-text); }
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card p { margin: 0; color: #C9D1DE; line-height: 1.7; word-break: keep-all; }
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card .flow-copy { color: var(--vp-mute); font-size: 14px; line-height: 1.6; border-top: 1px solid var(--vp-line); padding-top: 16px; }
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card > b { display: inline-flex; gap: 8px; align-items: center; font-size: 14px; color: var(--vp-teal); }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 860px) {
+  :is(.public-site, #vm-detail) .case-detail-page .case-facts { grid-template-columns: 1fr; padding-top: 72px; }
+  :is(.public-site, #vm-detail) .case-detail-page .case-facts article { padding: 28px; }
+  :is(.public-site, #vm-detail) .case-detail-page .case-facts article:first-child { grid-template-columns: 1fr; padding: 32px 0 40px; row-gap: 12px; }
+  :is(.public-site, #vm-detail) .case-detail-page .case-facts article:first-child p { grid-column: 1; grid-row: auto; }
+  :is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .section-heading,
+  :is(.public-site, #vm-detail) .product-detail-page :is(.detail-lead, .capability-band) { grid-template-columns: 1fr; row-gap: 14px; }
+  :is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .section-heading :is(h2, .section-intro) { grid-column: 1; }
+  :is(.public-site, #vm-detail) .product-detail-page .detail-lead { padding-top: 72px; }
+  :is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .flow-strip { grid-template-columns: 1fr; gap: 28px; }
+  :is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .flow-strip::before { top: 0; bottom: 0; left: 7px; right: auto; width: 1px; height: auto; background: linear-gradient(180deg, var(--vp-teal), var(--vp-blue)); }
+  :is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .flow-strip > div { padding: 0 0 0 36px; }
+  :is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) > .related-panel { flex-direction: column; align-items: flex-start; padding: 28px; margin-left: 24px; margin-right: 24px; max-width: none; }
+  :is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) > .detail-cta { padding-top: 100px; padding-bottom: 120px; }
+  :is(.public-site, #vm-detail) .cases-hub-page .case-hub-card { grid-template-columns: 1fr; gap: 16px; padding: 36px 0; }
+  :is(.public-site, #vm-detail) .cases-hub-page .case-hub-card:hover { padding-left: 0; }
+  :is(.public-site, #vm-detail) .products-hub-page .product-hub-grid { grid-template-columns: 1fr; }
+  :is(.public-site, #vm-detail) .products-hub-page .product-hub-card { padding: 28px; min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(.public-site, #vm-detail) .case-detail-page .page-hero .project-type::before { animation: none; }
+}
+
+/* reset older grid rules inside hub cards */
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-list { grid-template-columns: minmax(0, 1fr); }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card { grid-column: 1 / -1; width: auto; min-width: 0; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card :is(dl, dl div) { grid-template-columns: minmax(0, 1fr); }
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+:is(.public-site, #vm-detail) .products-hub-page .product-hub-card > * { grid-column: 1; }
+@media (max-width: 860px) {
+  :is(.public-site, #vm-detail) .cases-hub-page .case-hub-card { grid-template-columns: minmax(0, 1fr); }
+}
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > span { grid-row: 1; grid-column: 1; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > div { grid-row: 1; grid-column: 2; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > dl { grid-row: 1; grid-column: 3; }
+:is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > b { grid-row: 1; grid-column: 4; }
+@media (max-width: 860px) {
+  :is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > * { grid-row: auto; grid-column: 1; }
+}
+
+/* ---------- Page background images (Flow) ---------- */
+:is(.public-site, #vm-detail) main[data-vp-bg] > .page-hero {
+  min-height: min(78vh, 760px); display: flex; align-items: flex-end;
+  background:
+    linear-gradient(90deg, var(--vp-bg) 0%, rgba(5,8,15,.92) 30%, rgba(5,8,15,.45) 62%, rgba(5,8,15,.1) 100%),
+    linear-gradient(0deg, var(--vp-bg) 0%, rgba(5,8,15,0) 35%),
+    var(--vp-img) 78% center / cover no-repeat,
+    var(--vp-bg);
+}
+:is(.public-site, #vm-detail) main[data-vp-bg] > .page-hero > div { width: 100%; }
+:is(.public-site, #vm-detail) main[data-vp-bg] > .page-hero::before { opacity: .25; }
+:is(.public-site, #vm-detail) main[data-vp-bg="gift"] { --vp-img: url("./page-bg-gift.webp"); }
+:is(.public-site, #vm-detail) main[data-vp-bg="pungsu"] { --vp-img: url("./page-bg-pungsu.webp"); }
+:is(.public-site, #vm-detail) main[data-vp-bg="products"] { --vp-img: url("./page-bg-products.webp"); }
+:is(.public-site, #vm-detail) main[data-vp-bg="cases"] { --vp-img: url("./section-bg-a2.webp"); }
+/* echo the same image faintly behind the closing CTA */
+:is(.public-site, #vm-detail) main[data-vp-bg] > .detail-cta {
+  background:
+    radial-gradient(60% 70% at 50% 100%, rgba(62,230,212,.18), transparent 70%),
+    linear-gradient(180deg, var(--vp-bg) 0%, rgba(5,8,15,.82) 40%, rgba(5,8,15,.9) 100%),
+    var(--vp-img) center 70% / cover no-repeat;
+}
+@media (max-width: 860px) {
+  :is(.public-site, #vm-detail) main[data-vp-bg] > .page-hero {
+    min-height: 0; padding-top: 52vw;
+    background:
+      linear-gradient(0deg, var(--vp-bg) 38%, rgba(5,8,15,.55) 70%, rgba(5,8,15,.15) 100%),
+      var(--vp-img) 70% top / auto 70vw no-repeat,
+      var(--vp-bg);
+  }
+}
