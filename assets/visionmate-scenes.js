@@ -64,3 +64,20 @@
     card.style.setProperty('--vm-my', `${e.clientY - r.top}px`);
   }, { passive: true });
 })();
+
+/* Magnetic buttons (mouse only, hero excluded) */
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const sel = '.home-route main > section:not(.pin-journey) .primary-button';
+  let active = null;
+  document.addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    const btn = e.target.closest && e.target.closest(sel);
+    if (active && active !== btn) { active.style.setProperty('--vm-bx', '0px'); active.style.setProperty('--vm-by', '0px'); active = null; }
+    if (!btn) return;
+    active = btn;
+    const r = btn.getBoundingClientRect();
+    btn.style.setProperty('--vm-bx', `${((e.clientX - r.left) / r.width - .5) * 8}px`);
+    btn.style.setProperty('--vm-by', `${((e.clientY - r.top) / r.height - .5) * 6}px`);
+  }, { passive: true });
+})();

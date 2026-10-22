@@ -94,3 +94,70 @@
   }
   :is(.public-site, #vm-scenes) .lab-story[data-vm-flow-step="2"] .lab-plan-budget b { color: var(--lab-teal, #35e6c5); transition: color .6s .2s; }
 }
+
+/* ---------- 6. Buttons: gradient ring, shine sweep, magnetic pull (hero excluded) ---------- */
+:is(.public-site, #vm-scenes) main > section:not(.pin-journey) .primary-button,
+:is(.public-site, #vm-scenes) .final-cta-redesign :is(.primary-button, .text-button) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transform: translate(var(--vm-bx, 0px), var(--vm-by, 0px));
+  transition: transform .35s cubic-bezier(.22, 1, .36, 1), box-shadow .35s, background-color .35s;
+}
+:is(.public-site, #vm-scenes) main > section:not(.pin-journey) .primary-button {
+  background: linear-gradient(135deg, #2f7cff 0%, #2364e8 55%, #17a6b8 100%);
+  box-shadow: 0 0 0 1px rgba(120, 190, 255, .35) inset, 0 8px 24px -10px rgba(47, 124, 255, .7);
+}
+:is(.public-site, #vm-scenes) main > section:not(.pin-journey) .primary-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .28) 48%, transparent 66%);
+  transform: translateX(-120%);
+  transition: transform .7s cubic-bezier(.22, 1, .36, 1);
+  pointer-events: none;
+}
+:is(.public-site, #vm-scenes) main > section:not(.pin-journey) .primary-button:hover {
+  box-shadow: 0 0 0 1px rgba(150, 220, 255, .6) inset, 0 14px 36px -12px rgba(53, 230, 197, .65), 0 0 24px -6px rgba(47, 124, 255, .55);
+}
+:is(.public-site, #vm-scenes) main > section:not(.pin-journey) .primary-button:hover::after { transform: translateX(120%); }
+:is(.public-site, #vm-scenes) main > section:not(.pin-journey) :is(.primary-button, .text-button, .product-actions a) svg {
+  transition: transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+:is(.public-site, #vm-scenes) main > section:not(.pin-journey) :is(.primary-button, .text-button, .product-actions a):hover svg { transform: translateX(4px); }
+:is(.public-site, #vm-scenes) main > section:not(.pin-journey) .primary-button:active { transform: translate(var(--vm-bx, 0px), var(--vm-by, 0px)) scale(.97); }
+:is(.public-site, #vm-scenes) main > section:not(.pin-journey) .primary-button:focus-visible {
+  outline: 2px solid #35e6c5;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(.public-site, #vm-scenes) main > section:not(.pin-journey) .primary-button { transform: none; }
+  :is(.public-site, #vm-scenes) main > section:not(.pin-journey) .primary-button::after { display: none; }
+}
+
+/* ---------- 7. Process section key visual (Flow) ---------- */
+:is(.public-site, #vm-scenes).home-route .vm-process { isolation: isolate; }
+:is(.public-site, #vm-scenes).home-route .vm-process::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  max-width: 1920px;
+  transform: translate(-50%, calc((var(--vm-section-progress, .5) - .5) * -48px)) scale(calc(1.04 - var(--vm-section-progress, .5) * .04));
+  background:
+    linear-gradient(90deg, #070b14 0%, rgba(7, 11, 20, .92) 40%, rgba(7, 11, 20, .62) 72%, rgba(7, 11, 20, .72) 100%),
+    linear-gradient(180deg, #070b14 0%, rgba(7, 11, 20, .85) 22%, rgba(7, 11, 20, .25) 48%, rgba(7, 11, 20, .4) 80%, #070b14 100%),
+    url("./section-bg-process.webp") 96% 62% / min(1400px, 110%) auto no-repeat;
+  pointer-events: none;
+}
+@media (max-width: 700px) {
+  :is(.public-site, #vm-scenes).home-route .vm-process::before {
+    background:
+      linear-gradient(180deg, #070b14 0%, rgba(7, 11, 20, .5) 12%, rgba(7, 11, 20, .92) 34%, #070b14 100%),
+      url("./section-bg-process.webp") 70% 0 / 180% auto no-repeat;
+  }
+}
