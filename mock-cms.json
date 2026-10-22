@@ -56,13 +56,13 @@
         "slug": "products",
         "eyebrow": "PRODUCTS",
         "title": "직접 만들고,\n운영하며 배웁니다.",
-        "description": "메이트기프트와 MateGift Lab. 판촉 상품을 찾는 일부터 캠페인을 기획하는 일까지, 구체적인 업무에서 출발한 서비스입니다.",
+        "description": "메이트기프트, MateGift Lab, 풍수메이트, TrendMate. 판촉 유통부터 개인 서비스와 웹매거진까지, 직접 만들고 운영하며 배우는 서비스입니다.",
         "primaryCtaLabel": "구축 사례 보기",
         "primaryCtaTarget": "/cases",
         "secondaryCtaLabel": "프로젝트 문의",
         "secondaryCtaTarget": "/contact",
-        "seoTitle": "자체 서비스 | 메이트기프트·MateGift Lab | 비전메이트",
-        "metaDescription": "메이트기프트와 MateGift Lab. 판촉 상품을 찾는 일부터 캠페인을 기획하는 일까지, 구체적인 업무에서 출발한 서비스입니다."
+        "seoTitle": "자체 서비스 | 메이트기프트·MateGift Lab·풍수메이트·TrendMate | 비전메이트",
+        "metaDescription": "메이트기프트, MateGift Lab, 풍수메이트, TrendMate. 판촉 유통부터 개인 서비스와 웹매거진까지, 직접 만들고 운영하며 배우는 서비스입니다."
       },
       {
         "slug": "about",
@@ -249,6 +249,32 @@
         "keywords": "캠페인 실행안 · 예산 설계 · 견적 연결",
         "featuredOnHome": true,
         "homeSortOrder": 1
+      },
+      {
+        "id": "pungsumate",
+        "slug": "pungsumate",
+        "name": "풍수메이트",
+        "subtitle": "나의 사주와 생활풍수",
+        "description": "출생 정보로 성향·재물운·직업운·관계운을 쉬운 말로 풀어 주는 사주·생활풍수 서비스입니다. 출생 정보는 이용자 기기 안에서만 계산합니다.",
+        "positioning": "운영비 최소화 B2C 서비스",
+        "problem": "사주 서비스는 민감한 출생 정보를 다루고, AI로 풀이를 만들면 이용자가 늘수록 비용도 늘어납니다. 풍수메이트는 실행 중 AI 호출 없이 운영비가 쌓이지 않는 구조로 만들었습니다.",
+        "flow": "출생 정보 입력 → 기기 안 계산 → 영역별 풀이 → 이번 주 기록",
+        "keywords": "기기 안 계산 · 운영비 최소화 · 쉬운 풀이 · 전문가 검토 후 공개",
+        "featuredOnHome": false,
+        "homeSortOrder": 3
+      },
+      {
+        "id": "trendmate",
+        "slug": "trendmate",
+        "name": "TrendMate",
+        "subtitle": "Trend · Insight · Strategy",
+        "description": "데이터로 트렌드를 읽고 비즈니스의 다음을 설계하는 웹매거진입니다. 소비 트렌드와 사업·제품 기초 개념을 다룹니다.",
+        "positioning": "트렌드 웹매거진",
+        "problem": "트렌드 정보는 많지만, 실제 사업과 서비스 기획에 바로 쓸 수 있게 정리된 글은 많지 않습니다. TrendMate는 소비 트렌드와 사업 개념을 실무 관점으로 정리합니다.",
+        "flow": "트렌드 발견 → 데이터·사례 정리 → 실무 관점 해설 → 비즈니스 적용",
+        "keywords": "Consumer Trends · Solution · Trend",
+        "featuredOnHome": false,
+        "homeSortOrder": 4
       }
     ],
     "insights": [
