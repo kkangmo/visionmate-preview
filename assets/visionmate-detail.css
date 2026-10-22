@@ -386,3 +386,10 @@
   :is(.public-site, #vm-detail) .solutions-hub-page .solutions-related-grid { grid-template-columns: minmax(0, 1fr); }
   :is(.public-site, #vm-detail) .solutions-hub-page .solutions-related-grid > a { padding: 28px; }
 }
+
+/* ---------- Contrast fixes found by the site-wide audit ---------- */
+/* Primary buttons keep the site's blue gradient, so use white text on them. */
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .primary-button,
+:is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .primary-button svg { color: #fff; }
+/* Solution detail closing heading was dark text on a dark background. */
+:is(.public-site, #vm-detail) .solution-detail-page .detail-cta h2 { color: #E8EDF5; }
