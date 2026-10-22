@@ -393,3 +393,5 @@
 :is(.public-site, #vm-detail) :is(.case-detail-page, .product-detail-page) .primary-button svg { color: #fff; }
 /* Solution detail closing heading was dark text on a dark background. */
 :is(.public-site, #vm-detail) .solution-detail-page .detail-cta h2 { color: #E8EDF5; }
+/* related cases: drop the old two-row layout that left an empty band */
+:is(.public-site, #vm-detail) .solutions-hub-page .solutions-related-grid { grid-template-rows: none; grid-auto-rows: auto; align-items: stretch; min-height: 0; height: auto; }

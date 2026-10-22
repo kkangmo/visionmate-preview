@@ -99,6 +99,18 @@
         "secondaryCtaTarget": "/cases",
         "seoTitle": "프로젝트 문의 | AI 개발·업무 자동화 상담 | 비전메이트",
         "metaDescription": "반복되는 업무나 만들고 싶은 서비스부터 이야기해 주세요. 기술이나 기능 목록을 미리 정하지 않아도 됩니다."
+      },
+      {
+        "slug": "ai-search",
+        "eyebrow": "AEO · GEO · SEO",
+        "title": "구글과 AI가 먼저 찾는 회사로.",
+        "description": "고객이 구글에 검색하고 AI에게 물어볼 때 우리 회사가 나오도록, 홈페이지·글·기사를 몇 달에 걸쳐 꾸준히 쌓아 드립니다.",
+        "primaryCtaLabel": "진단 문의하기",
+        "primaryCtaTarget": "contact",
+        "secondaryCtaLabel": "구축 사례 보기",
+        "secondaryCtaTarget": "cases",
+        "seoTitle": "AEO·GEO 마케팅 | 구글·AI 검색 최적화 | 비전메이트",
+        "metaDescription": "SEO·AEO·GEO로 구글 검색과 ChatGPT·제미나이 같은 AI 답변에서 우리 회사가 발견되도록 몇 달에 걸쳐 꾸준히 관리합니다."
       }
     ],
     "solutions": [
@@ -496,14 +508,19 @@
         "sortOrder": 3
       },
       {
+        "label": "AEO·GEO",
+        "route": "/ai-search",
+        "sortOrder": 4
+      },
+      {
         "label": "비전메이트",
         "route": "/about",
-        "sortOrder": 4
+        "sortOrder": 5
       },
       {
         "label": "인사이트",
         "route": "/insights",
-        "sortOrder": 5
+        "sortOrder": 6
       }
     ],
     "seo": [],
