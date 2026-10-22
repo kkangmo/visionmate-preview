@@ -162,3 +162,12 @@
       url("./section-bg-process.webp") 70% 0 / 180% auto no-repeat;
   }
 }
+
+/* ---------- 8. Paper Shaders layer (products section only) ---------- */
+:is(.public-site, #vm-scenes) main > section.products-section:not(.pin-journey) { position: relative; isolation: isolate; }
+:is(.public-site, #vm-scenes) .vm-shader-layer {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  opacity: 0; transition: opacity 1.2s ease;
+}
+:is(.public-site, #vm-scenes) .vm-shader-layer[data-ready="true"] { opacity: .55; }
+:is(.public-site, #vm-scenes) .vm-shader-layer canvas { width: 100% !important; height: 100% !important; display: block; }
