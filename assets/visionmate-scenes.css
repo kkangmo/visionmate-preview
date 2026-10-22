@@ -17,7 +17,7 @@
   max-width: 1920px;
   transform: translate(-50%, calc((var(--vm-section-progress, .5) - .5) * -36px));
   background:
-    linear-gradient(90deg, #070b14 0%, rgba(7, 11, 20, .92) 34%, rgba(7, 11, 20, .55) 62%, rgba(7, 11, 20, .7) 100%),
+    linear-gradient(90deg, #070b14 0%, rgba(7, 11, 20, .88) 30%, rgba(7, 11, 20, .25) 58%, rgba(7, 11, 20, .1) 100%),
     linear-gradient(180deg, #070b14 0%, rgba(7, 11, 20, 0) 22%, rgba(7, 11, 20, 0) 78%, #070b14 100%),
     url("./section-bg-positioning.webp") 85% center / cover no-repeat;
   pointer-events: none;
@@ -32,10 +32,11 @@
   inset: -40px 0;
   transform: translateY(calc((var(--vm-section-progress, .5) - .5) * -40px));
   background:
-    linear-gradient(90deg, rgba(7, 11, 20, .9) 0%, rgba(7, 11, 20, .55) 45%, rgba(7, 11, 20, .15) 100%),
+    linear-gradient(90deg, rgba(7, 11, 20, .85) 0%, rgba(7, 11, 20, .35) 45%, rgba(7, 11, 20, 0) 100%),
     url("./section-bg-cta.webp") 72% center / cover no-repeat;
-  opacity: .9;
+  opacity: 1;
 }
+:is(.public-site, #vm-scenes) .final-cta-redesign .final-cta-overlay { opacity: .35; }
 
 /* ---------- 3. Cursor spotlight on cards ---------- */
 @media (hover: hover) and (pointer: fine) {
@@ -149,7 +150,7 @@
   max-width: 1920px;
   transform: translate(-50%, calc((var(--vm-section-progress, .5) - .5) * -48px)) scale(calc(1.04 - var(--vm-section-progress, .5) * .04));
   background:
-    linear-gradient(90deg, #070b14 0%, rgba(7, 11, 20, .92) 40%, rgba(7, 11, 20, .62) 72%, rgba(7, 11, 20, .72) 100%),
+    linear-gradient(90deg, #070b14 0%, rgba(7, 11, 20, .9) 38%, rgba(7, 11, 20, .35) 66%, rgba(7, 11, 20, .25) 100%),
     linear-gradient(180deg, #070b14 0%, rgba(7, 11, 20, .85) 22%, rgba(7, 11, 20, .25) 48%, rgba(7, 11, 20, .4) 80%, #070b14 100%),
     url("./section-bg-process.webp") 96% 62% / min(1400px, 110%) auto no-repeat;
   pointer-events: none;
