@@ -121,6 +121,8 @@ ob_start();
 <section><h2>한 달씩, 차근차근 쌓습니다.</h2><ol><li>1개월 · 살펴보기: 지금 검색과 AI 답변에서 우리 회사가 어떻게 보이는지, 경쟁사와 비교해 확인합니다.</li><li>2~3개월 · 기초 다지기: 홈페이지 정보를 바로잡고, 자주 묻는 질문과 사례를 정리하고, 첫 전문 글을 올립니다.</li><li>4~6개월 · 넓히기: 전문 글을 꾸준히 올리고 기사와 외부 소개를 늘리며, AI 답변에 우리 회사가 나오는지 확인합니다.</li><li>그 이후 · 매달 다듬기: 무엇이 효과가 있었는지 보고 다음 달 계획을 세웁니다.</li></ol><p>일정은 회사마다 다릅니다. 검색 순위, 기사 게재, AI 답변 노출을 약속하지는 않습니다.</p></section>
 <section><h2>비전메이트가 다른 점</h2><p>직접 해 보고 있습니다: 비전메이트 홈페이지와 웹매거진 TrendMate에 같은 방법을 적용하고 있습니다.</p><p>하나로 묶어 관리합니다: 홈페이지, 글, 기사, 확인을 한 계획 안에서 매달 관리합니다.</p><p>사실만 씁니다: 실제 정보와 근거만 사용하고, 가짜 후기나 돈으로 산 링크는 쓰지 않습니다.</p></section>
 <section><h2>자주 묻는 질문</h2><?php foreach ($aiSearchFaq as $f): ?><h3><?= $escape($f['question']) ?></h3><p><?= $escape($f['answer']) ?></p><?php endforeach; ?></section>
+<?php elseif ($found && $slug === 'privacy'): ?>
+<section><?php foreach (explode("\n", (string) ($settings['privacy_policy'] ?? '')) as $line): ?><p><?= $escape($line) ?></p><?php endforeach; ?></section>
 <?php elseif ($found && $slug === 'contact'): $contact = $section('CONTACT_CONTENT'); ?>
 <section><h2><?= $escape($contact['title']) ?></h2><p style="white-space:pre-line"><?= $escape($contact['body']) ?></p><p><?= $escape($contact['lockedBody']) ?></p></section>
 <?php endif; ?>
