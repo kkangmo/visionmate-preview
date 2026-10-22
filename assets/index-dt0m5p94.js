@@ -928,7 +928,7 @@ if(!P)return;
 let re=null,ue=P.parentElement;
 while(ue){let j=getComputedStyle(ue);
 if((j.overflowY==="auto"||j.overflowY==="scroll")&&ue.scrollHeight>ue.clientHeight){re=ue;
-break}ue=ue.parentElement}let Te=re?re.clientHeight:window.innerHeight,qe=Math.max(1,P.offsetHeight-Te),xt=q===0?0:(q+0.5)/Gr.length,Pi=P.getBoundingClientRect(),yt=re?re.getBoundingClientRect().top:0,pe=(re?re.scrollTop:window.scrollY)+(Pi.top-yt)+xt*qe;
+break}ue=ue.parentElement}let Te=re?re.clientHeight:window.innerHeight,qe=Math.max(1,P.offsetHeight-Te),xt=(q+0.5)/Gr.length,Pi=P.getBoundingClientRect(),yt=re?re.getBoundingClientRect().top:0,pe=(re?re.scrollTop:window.scrollY)+(Pi.top-yt)+xt*qe;
 if(re)re.scrollTo({top:pe,behavior:"smooth"});
 else window.scrollTo({top:pe,behavior:"smooth"})},L=Gr[Math.min(h,Gr.length-1)],U=k[Math.min(h,k.length-1)]?.key??L.key,ee=(()=>{try{let q=new URLSearchParams(window.location.search).get("vh"),P=q?parseInt(q,10):NaN;
 return Number.isFinite(P)&&P>=200&&P<=800?P:null}catch{return null}})();
