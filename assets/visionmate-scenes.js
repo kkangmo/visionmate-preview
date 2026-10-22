@@ -116,6 +116,7 @@
   function check() {
     frame = 0;
     const section = document.querySelector(sel);
+    if (section && !section.offsetParent) return; // hidden (A2 layer active)
     if (!section || (section === current && section.querySelector(':scope > .vm-shader-layer'))) return;
     const r = section.getBoundingClientRect();
     if (r.top > innerHeight + 400 || r.bottom < -400) return;
