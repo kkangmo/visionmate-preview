@@ -1,0 +1,96 @@
+/* VisionMate scenes (2026-10-22)
+   Section backgrounds made in Google Flow + body motion. The hero (.pin-journey) is never targeted.
+   All content stays visible without JS and with prefers-reduced-motion. */
+
+/* ---------- 1. Positioning section background ---------- */
+:is(.public-site, #vm-scenes).home-route .vm-positioning {
+  isolation: isolate;
+}
+:is(.public-site, #vm-scenes).home-route .vm-positioning::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  max-width: 1920px;
+  transform: translate(-50%, calc((var(--vm-section-progress, .5) - .5) * -36px));
+  background:
+    linear-gradient(90deg, #070b14 0%, rgba(7, 11, 20, .92) 34%, rgba(7, 11, 20, .55) 62%, rgba(7, 11, 20, .7) 100%),
+    linear-gradient(180deg, #070b14 0%, rgba(7, 11, 20, 0) 22%, rgba(7, 11, 20, 0) 78%, #070b14 100%),
+    url("./section-bg-positioning.webp") 85% center / cover no-repeat;
+  pointer-events: none;
+}
+
+/* ---------- 2. Final CTA background (replaces cta-bg.webp via CSS only) ---------- */
+:is(.public-site, #vm-scenes) .final-cta-redesign .final-cta-bg { opacity: 1; }
+:is(.public-site, #vm-scenes) .final-cta-redesign .final-cta-bg picture { display: none; }
+:is(.public-site, #vm-scenes) .final-cta-redesign .final-cta-bg::before {
+  content: "";
+  position: absolute;
+  inset: -40px 0;
+  transform: translateY(calc((var(--vm-section-progress, .5) - .5) * -40px));
+  background:
+    linear-gradient(90deg, rgba(7, 11, 20, .9) 0%, rgba(7, 11, 20, .55) 45%, rgba(7, 11, 20, .15) 100%),
+    url("./section-bg-cta.webp") 72% center / cover no-repeat;
+  opacity: .9;
+}
+
+/* ---------- 3. Cursor spotlight on cards ---------- */
+@media (hover: hover) and (pointer: fine) {
+  :is(.public-site, #vm-scenes) :is(.lab-features article, .lab-compare-col) {
+    position: relative;
+    overflow: hidden;
+  }
+  :is(.public-site, #vm-scenes) :is(.product-story, .lab-features article, .lab-compare-col)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    background: radial-gradient(380px circle at var(--vm-mx, -999px) var(--vm-my, -999px), rgba(53, 230, 197, .09), transparent 62%);
+    opacity: 0;
+    transition: opacity .35s;
+    pointer-events: none;
+  }
+  :is(.public-site, #vm-scenes) :is(.product-story, .lab-features article, .lab-compare-col):hover::before { opacity: 1; }
+  :is(.public-site, #vm-scenes) :is(.lab-features article, .lab-compare-col) { transition: border-color .3s, transform .3s; }
+  :is(.public-site, #vm-scenes) :is(.lab-features article, .lab-compare-col):hover {
+    border-color: rgba(53, 230, 197, .32);
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* ---------- 4. Section reveal (only when visionmate-scenes.js is running) ---------- */
+  html.vm-reveal-ready [data-vm-reveal]:not([data-vm-revealed]) { opacity: 0; }
+  html.vm-reveal-ready [data-vm-revealed] {
+    animation: vmSceneRise .75s cubic-bezier(.22, 1, .36, 1) both;
+    animation-delay: var(--vm-reveal-delay, 0ms);
+  }
+  @keyframes vmSceneRise {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* ---------- 5. MateGift Lab example UI builds up with scroll ---------- */
+  :is(.public-site, #vm-scenes) .lab-story[data-vm-motion-ready] .lab-plan-bar {
+    transform: scaleX(.08);
+    transform-origin: left center;
+    transition: transform .9s cubic-bezier(.22, 1, .36, 1);
+  }
+  :is(.public-site, #vm-scenes) .lab-story[data-vm-motion-ready] .lab-plan-rows li:nth-child(2) .lab-plan-bar { transition-delay: .12s; }
+  :is(.public-site, #vm-scenes) .lab-story[data-vm-motion-ready] .lab-plan-rows li:nth-child(3) .lab-plan-bar { transition-delay: .24s; }
+  :is(.public-site, #vm-scenes) .lab-story:is([data-vm-flow-step="1"], [data-vm-flow-step="2"]) .lab-plan-bar { transform: scaleX(1); }
+  :is(.public-site, #vm-scenes) .lab-story[data-vm-motion-ready] .lab-plan-budget {
+    opacity: .35;
+    transform: translateY(6px);
+    transition: opacity .6s, transform .6s cubic-bezier(.22, 1, .36, 1);
+  }
+  :is(.public-site, #vm-scenes) .lab-story[data-vm-flow-step="2"] .lab-plan-budget {
+    opacity: 1;
+    transform: none;
+  }
+  :is(.public-site, #vm-scenes) .lab-story[data-vm-flow-step="2"] .lab-plan-budget b { color: var(--lab-teal, #35e6c5); transition: color .6s .2s; }
+}
