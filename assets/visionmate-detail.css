@@ -256,7 +256,7 @@
 :is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > dl { grid-row: 1; grid-column: 3; }
 :is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > b { grid-row: 1; grid-column: 4; }
 @media (max-width: 860px) {
-  :is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > * { grid-row: auto; grid-column: 1; }
+  :is(.public-site, #vm-detail) .cases-hub-page .case-hub-card > :is(span, div, dl, b) { grid-row: auto; grid-column: 1; }
 }
 
 /* ---------- Page background images (Flow) ---------- */
