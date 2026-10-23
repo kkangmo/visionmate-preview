@@ -1,0 +1,43 @@
+/* VisionMate contact form (injected by visionmate-contact.js) */
+.vmc-form { display: grid; gap: 18px; margin: 22px 0 8px; }
+.vmc-field { display: grid; gap: 8px; margin: 0; padding: 0; border: 0; min-width: 0; }
+.vmc-field > span, .vmc-field > legend { font-size: 13px; font-weight: 600; color: #C9D1DE; padding: 0; }
+.vmc-field em { font-style: normal; font-size: 11px; color: #3EE6D4; margin-left: 4px; }
+.vmc-field input, .vmc-field textarea {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 15px; color: #F2F5FA;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.14); border-radius: 10px;
+  padding: 12px 14px; line-height: 1.5; resize: vertical;
+}
+.vmc-field input:focus, .vmc-field textarea:focus { outline: none; border-color: #3EE6D4; box-shadow: 0 0 0 3px rgba(62,230,212,.15); }
+.vmc-field textarea::placeholder { color: #6B7688; }
+.vmc-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.vmc-chip { position: relative; cursor: pointer; }
+.vmc-chip input { position: absolute; opacity: 0; pointer-events: none; }
+.vmc-chip span {
+  display: inline-block; font-size: 14px; color: #C9D1DE; padding: 8px 14px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.16); transition: border-color .15s, background-color .15s, color .15s;
+}
+.vmc-chip input:checked + span { color: #06121C; background: #3EE6D4; border-color: #3EE6D4; font-weight: 600; }
+.vmc-chip input:focus-visible + span { box-shadow: 0 0 0 3px rgba(62,230,212,.3); }
+.vmc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.vmc-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.vmc-agree { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.6; color: #9AA5B5; cursor: pointer; }
+.vmc-agree input { margin-top: 4px; accent-color: #3EE6D4; width: 16px; height: 16px; flex: none; }
+.vmc-agree a { color: #3EE6D4; }
+.vmc-msg { margin: 0; min-height: 1em; font-size: 14px; color: #FF8A8A; }
+.vmc-msg:empty { display: none; }
+.vmc-submit {
+  justify-self: start; font: inherit; font-size: 16px; font-weight: 700; color: #06121C; background: #3EE6D4;
+  border: 0; border-radius: 999px; padding: 14px 30px; cursor: pointer; transition: transform .15s, opacity .15s;
+}
+.vmc-submit:hover { transform: translateY(-1px); }
+.vmc-submit:disabled { opacity: .6; cursor: default; transform: none; }
+.vmc-done { padding: 28px 24px; border-radius: 12px; background: rgba(62,230,212,.08); border: 1px solid rgba(62,230,212,.35); }
+.vmc-done strong { display: block; font-size: 20px; color: #F2F5FA; margin-bottom: 8px; }
+.vmc-done p { margin: 0; color: #C9D1DE; line-height: 1.7; }
+.vmc-done a { color: #3EE6D4; }
+.vmc-or { margin: 26px 0 10px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.1); font-size: 13px; color: #9AA5B5; }
+@media (max-width: 560px) {
+  .vmc-row { grid-template-columns: 1fr; }
+  .vmc-submit { justify-self: stretch; }
+}
