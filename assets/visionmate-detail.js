@@ -40,3 +40,23 @@
   addEventListener('popstate', () => setTimeout(apply, 60));
   apply();
 })();
+
+/* Scroll the inner page container back to the top when the route (path) changes. */
+(() => {
+  let last = location.pathname;
+  const toTop = () => {
+    if (location.pathname === last) return;
+    last = location.pathname;
+    document.querySelectorAll('div').forEach((d) => {
+      if (d.scrollTop > 0 && /auto|scroll/.test(getComputedStyle(d).overflowY)) d.scrollTop = 0;
+    });
+    scrollTo(0, 0);
+  };
+  const wrap = (k) => {
+    const orig = history[k];
+    history[k] = function (...a) { const r = orig.apply(this, a); setTimeout(toTop, 0); return r; };
+  };
+  wrap('pushState');
+  wrap('replaceState');
+  addEventListener('popstate', () => setTimeout(toTop, 0));
+})();
