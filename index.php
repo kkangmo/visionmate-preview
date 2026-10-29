@@ -26,8 +26,8 @@ if ($collection && isset($parts[1])) {
 }
 $found = $page !== null && count($parts) <= ($collection ? 2 : 1) && (!isset($parts[1]) || $item !== null);
 if (!$found) { http_response_code(404); }
-$heading = $item['title'] ?? $item['name'] ?? $page['title'] ?? '페이지를 찾을 수 없습니다.';
-$description = $item['publishedDescription'] ?? $item['shortDescription'] ?? $item['description'] ?? $item['subtitle'] ?? $page['metaDescription'] ?? '';
+$heading = $item['seoHeading'] ?? $item['title'] ?? $item['name'] ?? $page['title'] ?? '페이지를 찾을 수 없습니다.';
+$description = $item['publishedDescription'] ?? $item['metaDescription'] ?? $item['shortDescription'] ?? $item['description'] ?? $item['subtitle'] ?? $page['metaDescription'] ?? '';
 $title = $item['seoTitle'] ?? $item['publishedTitle'] ?? ($item ? $heading . ' | 비전메이트' : ($page['seoTitle'] ?? '페이지를 찾을 수 없습니다. | 비전메이트'));
 $canonical = $origin . ($path === '/' ? '/' : $path);
 $robots = (!$found || $slug === 'admin') ? 'noindex,nofollow' : 'index,follow';

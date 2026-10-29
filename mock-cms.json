@@ -26,7 +26,7 @@
         "secondaryCtaLabel": "구축 사례 보기",
         "secondaryCtaTarget": "cases",
         "seoTitle": "비전메이트 | AI 서비스 개발·업무 자동화·시스템 구축",
-        "metaDescription": "VisionMate는 AI·데이터·자동화를 활용해 AI 서비스, 업무 자동화, 비즈니스 시스템과 성장 시스템을 설계하고 구축합니다."
+        "metaDescription": "비전메이트는 AI·데이터·자동화를 활용해 AI 서비스, 업무 자동화, 비즈니스 시스템과 성장 시스템을 설계하고 구축합니다."
       },
       {
         "slug": "solutions",
@@ -49,7 +49,7 @@
         "primaryCtaTarget": "/contact",
         "secondaryCtaLabel": "AI 솔루션 보기",
         "secondaryCtaTarget": "/solutions",
-        "seoTitle": "구축 사례 | 비전메이트",
+        "seoTitle": "구축 사례 | AI 서비스·업무 자동화 프로젝트 | 비전메이트",
         "metaDescription": "공개 가능한 프로젝트의 문제, 설계 판단, 구현 범위를 정리하고 있습니다."
       },
       {
@@ -61,7 +61,7 @@
         "primaryCtaTarget": "/cases",
         "secondaryCtaLabel": "프로젝트 문의",
         "secondaryCtaTarget": "/contact",
-        "seoTitle": "자체 서비스 | 메이트기프트·MateGift Lab·풍수메이트·TrendMate | 비전메이트",
+        "seoTitle": "자체 서비스 | 메이트기프트·풍수메이트·TrendMate | 비전메이트",
         "metaDescription": "메이트기프트, MateGift Lab, 풍수메이트, TrendMate. 판촉 유통부터 개인 서비스와 웹매거진까지, 직접 만들고 운영하며 배우는 서비스입니다."
       },
       {
@@ -85,7 +85,7 @@
         "primaryCtaTarget": "/contact",
         "secondaryCtaLabel": "AI 솔루션 보기",
         "secondaryCtaTarget": "/solutions",
-        "seoTitle": "인사이트 | 비전메이트",
+        "seoTitle": "인사이트 | AI 활용·업무 자동화 글 | 비전메이트",
         "metaDescription": "AI 활용, 업무 자동화, 서비스 운영에 관한 관점을 다룹니다. 확인 가능한 출처와 적용 맥락을 함께 전합니다."
       },
       {
@@ -140,7 +140,8 @@
         "status": "PUBLISHED",
         "visible": true,
         "seoTitle": "AI 서비스 기획·MVP 개발 | 비전메이트",
-        "metaDescription": "아이디어를 검증 가능한 첫 서비스로. 사용자와 해결할 문제를 정의하고, 핵심 가설을 검증할 첫 버전의 범위를 설계합니다."
+        "metaDescription": "AI 서비스 기획·MVP 개발. 아이디어를 검증 가능한 첫 서비스로 만들기 위해 사용자와 해결할 문제를 정의하고, 핵심 가설을 검증할 첫 버전의 범위를 설계합니다.",
+        "seoHeading": "AI 서비스 기획·MVP 개발"
       },
       {
         "id": "ai-system",
@@ -160,7 +161,8 @@
         "status": "PUBLISHED",
         "visible": true,
         "seoTitle": "AI 시스템 구축·데이터 연동 | 비전메이트",
-        "metaDescription": "AI와 데이터를 하나의 서비스로. 사용자 화면, 데이터 흐름, AI 처리 단계와 사람의 검토 지점을 연결합니다."
+        "metaDescription": "AI 시스템 구축·데이터 연동. 사용자 화면, 데이터 흐름, AI 처리 단계와 사람의 검토 지점을 연결해 AI와 데이터를 하나의 서비스로 만듭니다.",
+        "seoHeading": "AI 시스템 구축·데이터 연동"
       },
       {
         "id": "automation",
@@ -180,7 +182,8 @@
         "status": "PUBLISHED",
         "visible": true,
         "seoTitle": "업무 자동화·API 연동 | 비전메이트",
-        "metaDescription": "반복 업무를 연결하고, 판단에 집중하도록. 입력부터 처리, 검토, 결과 기록까지 자동화 가능한 단계와 예외 처리를 설계합니다."
+        "metaDescription": "업무 자동화·API 연동. 입력부터 처리, 검토, 결과 기록까지 반복 업무 중 자동화할 단계와 예외 처리를 설계해 사람은 판단에 집중하도록 돕습니다.",
+        "seoHeading": "업무 자동화·API 연동"
       },
       {
         "id": "growth",
@@ -200,7 +203,8 @@
         "status": "PUBLISHED",
         "visible": true,
         "seoTitle": "검색·콘텐츠 성장 시스템 | 비전메이트",
-        "metaDescription": "검색과 콘텐츠가 쌓이는 성장 구조. 검색에 노출되는 정보 구조와 콘텐츠 발행, 유입부터 문의까지의 측정 흐름을 설계합니다."
+        "metaDescription": "검색·콘텐츠 성장 시스템. 검색에 노출되는 정보 구조와 콘텐츠 발행, 유입부터 문의까지의 측정 흐름을 설계해 검색과 콘텐츠가 쌓이는 구조를 만듭니다.",
+        "seoHeading": "검색·콘텐츠 성장 시스템"
       }
     ],
     "cases": [
@@ -255,7 +259,8 @@
         "flow": "목적 분석 → 상품 추천 → 견적 연계 → 고객문의 관리",
         "keywords": "판촉 기획 · 상품 탐색 · 상담 연결",
         "featuredOnHome": true,
-        "homeSortOrder": 2
+        "homeSortOrder": 2,
+        "seoTitle": "메이트기프트 | 판촉물 기획·판매 서비스 | 비전메이트"
       },
       {
         "id": "mategift-lab",
@@ -268,7 +273,8 @@
         "flow": "상황 입력 → 운영안 설계 → 예산 배분 → 상품/브랜드 구성 → 실제 견적",
         "keywords": "캠페인 실행안 · 예산 설계 · 견적 연결",
         "featuredOnHome": true,
-        "homeSortOrder": 1
+        "homeSortOrder": 1,
+        "seoTitle": "MateGift Lab | AI 판촉 캠페인 설계 | 비전메이트"
       },
       {
         "id": "pungsumate",
@@ -281,7 +287,8 @@
         "flow": "출생 정보 입력 → 기기 안 계산 → 영역별 풀이 → 이번 주 기록",
         "keywords": "기기 안 계산 · 운영비 최소화 · 쉬운 풀이 · 전문가 검토 후 공개",
         "featuredOnHome": false,
-        "homeSortOrder": 3
+        "homeSortOrder": 3,
+        "seoTitle": "풍수메이트 | 사주·생활풍수 서비스 | 비전메이트"
       },
       {
         "id": "trendmate",
@@ -294,7 +301,8 @@
         "flow": "트렌드 발견 → 데이터·사례 정리 → 실무 관점 해설 → 비즈니스 적용",
         "keywords": "Consumer Trends · Solution · Trend",
         "featuredOnHome": false,
-        "homeSortOrder": 4
+        "homeSortOrder": 4,
+        "seoTitle": "TrendMate | 트렌드 웹매거진 | 비전메이트"
       }
     ],
     "insights": [
