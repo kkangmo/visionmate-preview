@@ -78,6 +78,13 @@ $metadata = '<link rel="canonical" data-visionmate-canonical="true" href="' . $e
 foreach (['og:title'=>$title, 'og:description'=>$description, 'og:url'=>$canonical, 'og:type'=>'website', 'og:site_name'=>'비전메이트', 'og:locale'=>'ko_KR'] as $key=>$value) {
     $metadata .= '<meta property="' . $key . '" content="' . $escape($value) . '" />';
 }
+$ogImage = $origin . '/assets/og-image.jpg';
+foreach (['og:image'=>$ogImage, 'og:image:width'=>'1200', 'og:image:height'=>'630', 'og:image:alt'=>'비전메이트 — 아이디어를 비즈니스로, AI를 작동하는 시스템으로.'] as $key=>$value) {
+    $metadata .= '<meta property="' . $key . '" content="' . $escape($value) . '" />';
+}
+foreach (['twitter:card'=>'summary_large_image', 'twitter:title'=>$title, 'twitter:description'=>$description, 'twitter:image'=>$ogImage] as $key=>$value) {
+    $metadata .= '<meta name="' . $key . '" content="' . $escape($value) . '" />';
+}
 $metadata .= '<script type="application/ld+json" data-visionmate-schema="true">' . json_encode(['@context'=>'https://schema.org', '@graph'=>$graph], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP) . '</script>';
 $html = str_replace('</head>', $metadata . '</head>', $html);
 ob_start();
