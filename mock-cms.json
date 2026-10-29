@@ -49,7 +49,7 @@
         "primaryCtaTarget": "/contact",
         "secondaryCtaLabel": "AI 솔루션 보기",
         "secondaryCtaTarget": "/solutions",
-        "seoTitle": "구축 사례 | VisionMate",
+        "seoTitle": "구축 사례 | 비전메이트",
         "metaDescription": "공개 가능한 프로젝트의 문제, 설계 판단, 구현 범위를 정리하고 있습니다."
       },
       {
@@ -85,7 +85,7 @@
         "primaryCtaTarget": "/contact",
         "secondaryCtaLabel": "AI 솔루션 보기",
         "secondaryCtaTarget": "/solutions",
-        "seoTitle": "인사이트 | VisionMate",
+        "seoTitle": "인사이트 | 비전메이트",
         "metaDescription": "AI 활용, 업무 자동화, 서비스 운영에 관한 관점을 다룹니다. 확인 가능한 출처와 적용 맥락을 함께 전합니다."
       },
       {
@@ -220,7 +220,7 @@
         "relatedSolution": "ai-business",
         "featuredOnHome": false,
         "homeSortOrder": 1,
-        "publishedTitle": "유통 × AI 판촉 기획 사례 | VisionMate",
+        "publishedTitle": "유통 × AI 판촉 기획 사례 | 비전메이트",
         "publishedDescription": "판촉물 몰을 운영하며 겪은 '상품이 너무 많아 고르기 어렵다'는 문제를, 운영비를 최소화한 AI 기획 서비스로 풀었습니다."
       },
       {
@@ -239,7 +239,7 @@
         "relatedSolution": "ai-business",
         "featuredOnHome": false,
         "homeSortOrder": 2,
-        "publishedTitle": "풍수메이트 구축 사례 | VisionMate",
+        "publishedTitle": "풍수메이트 구축 사례 | 비전메이트",
         "publishedDescription": "실행 중 AI 호출 없이 운영비가 쌓이지 않고, 개인정보를 기기 안에서 처리하는 사주·생활풍수 서비스."
       }
     ],

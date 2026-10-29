@@ -3,6 +3,8 @@ DirectoryIndex index.php index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+  # One-hop canonical redirect: http or non-www -> https://www (only when the proxy says http, so https never loops)
+  RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
   RewriteCond %{HTTP_HOST} ^visionmate\.co\.kr$ [NC]
   RewriteRule ^ https://www.visionmate.co.kr%{REQUEST_URI} [R=301,L]
   RewriteRule ^index\.html$ / [R=301,L]
