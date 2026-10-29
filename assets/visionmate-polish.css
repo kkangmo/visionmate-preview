@@ -57,3 +57,34 @@
   padding-top: var(--vm-polish-section-y);
   padding-bottom: var(--vm-polish-section-y);
 }
+
+/* 4. Mobile tap targets >= 44px without changing layout:
+      extra padding is cancelled by an equal negative margin, so text position stays the same. */
+@media (max-width: 700px) {
+  :is(.public-site, #vm-polish) .more-link {
+    /* parent is flex, so use an invisible overlay hit area instead of padding */
+    position: relative;
+  }
+  :is(.public-site, #vm-polish) .more-link::after {
+    content: "";
+    position: absolute;
+    inset: -14px 0;
+  }
+  :is(.public-site, #vm-polish) .site-footer .footer-links a {
+    /* base min-height is 32px: padding lifts it to 44px, so only the 12px gain is cancelled */
+    padding: 10px 0;
+    margin: -6px 0;
+  }
+  :is(.public-site, #vm-polish) .footer-company-info dd a {
+    display: inline;
+    padding: 14px 0;
+  }
+  :is(.public-site, #vm-polish) .ax .state button {
+    position: relative;
+  }
+  :is(.public-site, #vm-polish) .ax .state button::after {
+    content: "";
+    position: absolute;
+    inset: -4px 0;
+  }
+}
