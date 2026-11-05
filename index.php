@@ -100,7 +100,7 @@ ob_start();
 <?php if (!empty($item[$key])): ?><section><h2><?= $label ?></h2><p><?= $escape($item[$key]) ?></p></section><?php endif; ?>
 <?php endforeach; ?>
 <?php if ($faqItems): ?><section><h2>자주 묻는 질문</h2><?php foreach ($faqItems as $f): ?><h3><?= $escape($f['question']) ?></h3><p><?= $escape($f['answer']) ?></p><?php endforeach; ?></section><?php endif; ?>
-<?php $links = ['mategift'=>'https://mategift.co.kr', 'mategift-lab'=>'https://recommend.visionmate.co.kr/lab-v3', 'pungsumate'=>'https://pungsumate.pages.dev/', 'trendmate'=>'https://www.trendmate.co.kr/']; if ($slug === 'products' && isset($links[$item['slug']])): ?><p><a style="color:#99caff" href="<?= $links[$item['slug']] ?>">서비스 바로가기</a></p><?php endif; ?>
+<?php $links = ['mategift'=>'https://mategift.co.kr', 'mategift-lab'=>'https://recommend.visionmate.co.kr/lab-v3', 'pungsumate'=>'https://pungsumate.pages.dev/', 'trendmate'=>'https://www.trendmate.co.kr/', 'qrplace'=>'https://www.qrplace.co.kr/']; if ($slug === 'products' && isset($links[$item['slug']])): ?><p><a style="color:#99caff" href="<?= $links[$item['slug']] ?>">서비스 바로가기</a></p><?php endif; ?>
 <?php foreach ($data['cases'] as $c): if ($slug === 'products' && $c['slug'] === $item['slug']): ?><p>관련 구축 사례: <a style="color:#99caff" href="/cases/<?= $escape($c['slug']) ?>"><?= $escape($c['name']) ?></a></p><?php endif; endforeach; ?>
 <?php elseif ($found && in_array($slug, ['home','solutions','products','cases'], true)): ?>
 <?php if ($slug === 'home'): ?><section><h2>가능성을 읽고, 작동하는 비즈니스를 만듭니다.</h2><p>아이디어가 서비스가 되고, 흩어진 업무가 하나의 흐름이 되도록. 비전메이트는 전략과 AI·데이터·개발을 연결하는 비즈니스 빌더입니다.</p><p>발견 → 설계 → 구축 → 연결 → 운영. 각 단계의 결과가 다음 판단의 근거가 됩니다.</p></section>

@@ -395,3 +395,63 @@
 :is(.public-site, #vm-detail) .solution-detail-page .detail-cta h2 { color: #E8EDF5; }
 /* related cases: drop the old two-row layout that left an empty band */
 :is(.public-site, #vm-detail) .solutions-hub-page .solutions-related-grid { grid-template-rows: none; grid-auto-rows: auto; align-items: stretch; min-height: 0; height: auto; }
+
+/* QRPLACE mockup gallery */
+.public-site .vp-gallery { display: grid; gap: 20px; }
+.public-site .vp-gallery h2 { margin: 0 0 8px; }
+.public-site .vp-gallery figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(135, 176, 231, .17);
+  border-radius: 16px;
+  background: #f4f6f9;
+}
+.public-site .vp-gallery figure img { display: block; width: 100%; height: auto; }
+.public-site .vp-gallery figure span {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(7, 11, 20, .78);
+  color: #f4f7fc;
+  font-size: 12px;
+  font-weight: 700;
+}
+.public-site .vp-gallery-note { margin: 0; color: #8fa1ba; font-size: 13px; }
+@media (max-width: 700px) {
+  .public-site .vp-gallery figure { border-radius: 12px; }
+  .public-site .vp-gallery figure span { top: 8px; left: 8px; font-size: 11px; }
+}
+
+/* QRPLACE feature cards */
+.public-site .vp-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.public-site .vp-feature-grid article {
+  padding: 20px;
+  border: 1px solid rgba(135, 176, 231, .17);
+  border-radius: 14px;
+  background: rgba(11, 23, 39, .6);
+}
+.public-site .vp-feature-grid span { color: #35e6c5; font-size: 12px; font-weight: 800; letter-spacing: .06em; }
+.public-site .vp-feature-grid h4 { margin: 10px 0 6px; font-size: 17px; }
+.public-site .vp-feature-grid p { margin: 0; color: #b5c2d4; font-size: 14px; line-height: 1.65; word-break: keep-all; }
+
+/* QRPLACE: why section, gallery captions, store card, extra hero buttons */
+.public-site .vp-why { display: grid; gap: 8px; }
+.public-site .vp-why h2 { margin: 0; word-break: keep-all; }
+.public-site .vp-gallery figcaption { padding: 12px 16px; background: #0b1727; color: #b5c2d4; font-size: 14px; line-height: 1.6; word-break: keep-all; }
+.public-site .vp-gallery figcaption b { color: #f4f7fc; }
+.public-site .vp-store { padding: 18px 20px; border: 1px dashed rgba(135, 176, 231, .3); border-radius: 14px; }
+.public-site .vp-store b { color: #35e6c5; font-size: 13px; }
+.public-site .vp-store p { margin: 6px 0 0; color: #b5c2d4; font-size: 15px; line-height: 1.65; word-break: keep-all; }
+.public-site .vp-hero-extra { display: inline-flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; margin-left: 20px; }
+.public-site .vp-hero-extra a { min-height: 44px; display: inline-flex; align-items: center; }
+@media (max-width: 700px) {
+  .public-site .vp-hero-extra { margin: 12px 0 0; width: 100%; }
+}
